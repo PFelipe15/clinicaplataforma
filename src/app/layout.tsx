@@ -25,9 +25,9 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="flex-grow transition duration-3000 ease-in-out">
-          {children}
-        </main>
+          <main className="flex-grow transition duration-3000 ease-in-out">
+            {children}
+          </main>
       </body>
     </html>
   );

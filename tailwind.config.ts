@@ -10,6 +10,8 @@ const config = {
     './src/**/*.{ts,tsx}',
 	],
   prefix: "",
+
+
   theme: {
     container: {
       center: true,
@@ -58,6 +60,13 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+
+      backgroundImage: {
+         'banner': "url('./assets/principal.jpg')",
+         'banner2': "url('./assets/pexels-matthiaszomer-339620.jpg')",
+      
+   
       },
       keyframes: {
         "accordion-down": {

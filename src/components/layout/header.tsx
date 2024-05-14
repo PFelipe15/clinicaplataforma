@@ -13,7 +13,7 @@ import { Button } from "../ui/button";
   
   export function Header() {
     return (
-      <div className=" flex  justify-between items-center  py-5  ">
+      <div className="flex  justify-between items-center  py-5  ">
         <h1>LOGOMARCA</h1>
         <Menubar>
           <MenubarMenu>
