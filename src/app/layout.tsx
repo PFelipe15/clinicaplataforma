@@ -20,12 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen flex flex-col px-[300px]    ",
+          "min-h-screen flex flex-col     ",
           poetsen.className
         )}
       >
         <Header />
-          <main className="flex-grow transition duration-3000 ease-in-out">
+          <main className="flex-grow  animate-fadeIn ">
             {children}
           </main>
       </body>

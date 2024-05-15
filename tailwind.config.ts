@@ -63,7 +63,7 @@ const config = {
       },
 
       backgroundImage: {
-         'banner': "url('./assets/principal.jpg')",
+         'banner': "url('./assets/Medicos.jpg')",
          'banner2': "url('./assets/pexels-matthiaszomer-339620.jpg')",
       
    
@@ -77,10 +77,26 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+
+        typing: {
+          from: { width: '0' },
+          to: { width: '100%' },
+        },
+        blink: {
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: 'black' },
+        },
+       
       },
+
+     
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "typing": 'typing 3.5s steps(40, end) forwards',
+        "blink": 'blink 0.75s step-end infinite',
+ 
       },
 
       fontFamily: {

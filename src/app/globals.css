@@ -6,17 +6,16 @@
     :root {
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
-
-      --card: 0 0% 100%;
+       --card: 0 0% 100%;
       --card-foreground: 222.2 84% 4.9%;
 
       --popover: 0 0% 100%;
       --popover-foreground: 222.2 84% 4.9%;
-
-      --primary: 222.2 47.4% 11.2%;
+      
+      --primary:202, 71%, 30% ;
       --primary-foreground: 210 40% 98%;
 
-      --secondary: 210 40% 96.1%;
+      --secondary: 207, 62%, 24%;
       --secondary-foreground: 222.2 47.4% 11.2%;
 
       --muted: 210 40% 96.1%;
@@ -48,7 +47,7 @@
       --primary: 210 40% 98%;
       --primary-foreground: 222.2 47.4% 11.2%;
 
-      --secondary: 217.2 32.6% 17.5%;
+      --secondary: 202, 71%, 30%;
       --secondary-foreground: 210 40% 98%;
 
       --muted: 217.2 32.6% 17.5%;
@@ -64,6 +63,19 @@
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
     }
+
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 2s ease-in forwards;
+  }
   }
 
   @layer base {
