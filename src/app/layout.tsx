@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils"
 import { Header } from "@/components/layout/header";
 import { Raleway } from 'next/font/google'
+import Map from "@/components/layout/map/map";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,6 +29,8 @@ export default function RootLayout({
           <main className="flex-grow  animate-fadeIn ">
             {children}
           </main>
+
+          <Map/>
       </body>
     </html>
   );

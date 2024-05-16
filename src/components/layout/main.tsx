@@ -12,6 +12,7 @@ import { Button } from "../ui/button"
 import Autoplay from "embla-carousel-autoplay"
 import Logo from "../../app/assets/Logo.jpg"
 import Image from "next/image"
+import  Tratamentos  from "./tratamentos"
  
 export function Main() {
   const plugin = React.useRef(
@@ -23,7 +24,6 @@ export function Main() {
       <div className="flex flex-col gap-4 text-black font-extrabold rounded-lg">
         <div className="flex flex-col gap-4 items-center md:items-baseline">
           <div className="flex items-center justify-center md:flex-row md:gap-4">
-  
             <Image
               src={Logo}
               width={120}
@@ -49,12 +49,8 @@ export function Main() {
       </div>
     </section>
   );
-  
 
-  
-  
-  
-    const Card2 = () => (
+  const Card2 = () => (
       <section className="bg-cover bg-center bg-no-repeat bg-banner2 flex flex-col items-center justify-center w-[100vw]  md:h-[100vh] text-white">
         <div className="flex flex-col gap-4 text-black font-extrabold rounded-lg">
 
@@ -90,11 +86,22 @@ export function Main() {
                 </div>
               </CarouselItem>
             ))}
-          </CarouselContent >
+          </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
- 
+
+        <div className="flex items-center flex-coll w-full justify-center  h-[90vh] ">
+            
+          <Tratamentos />
+        </div>
+
+{/* Diretor 1 */}
+        <div className="h-[100vh] flex  justify-center bg-cover w-[100vw] bg-banner3">
+
+       
+
+        </div>
       </div>
     );
   }
