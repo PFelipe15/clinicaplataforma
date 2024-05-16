@@ -91,12 +91,12 @@ export function Main() {
           <CarouselNext />
         </Carousel>
 
-        <div className="flex items-center flex-coll w-full justify-center  h-[90vh] ">
+        <div className="flex items-center flex-coll w-full justify-center  mt-6 ">
             
           <Tratamentos />
         </div>
 
-  
+ 
       </div>
     );
   }
