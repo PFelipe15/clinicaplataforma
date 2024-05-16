@@ -96,12 +96,7 @@ export function Main() {
           <Tratamentos />
         </div>
 
-{/* Diretor 1 */}
-        <div className="h-[100vh] flex  justify-center bg-cover w-[100vw] bg-banner3">
-
-       
-
-        </div>
+  
       </div>
     );
   }
