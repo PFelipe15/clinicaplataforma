@@ -38,7 +38,7 @@ import ButtonConsulta from "../buttonConsulta";
       };
       
       const handlePhoneMouseOver = () => {
-        window.open('https://api.whatsapp.com/send?phone=558699415-6897&text=Ol%C3%A1,%20quero%20uma%20consulta');
+        window.open('https://api.whatsapp.com/send?phone=558694912878&text=Ol%C3%A1,%20quero%20uma%20consulta');
       };
 
       return isLoaded ? (

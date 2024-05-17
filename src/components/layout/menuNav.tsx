@@ -24,8 +24,9 @@ export default function MenuNav() {
           </Link>{" "}
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>Nossa Equipe</MenubarTrigger>
-        </MenubarMenu>
+        <Link href={"/equipe"}>
+            <MenubarTrigger>Nossa Equipe</MenubarTrigger>
+          </Link>{" "}        </MenubarMenu>
         <MenubarMenu>
           <Link href={"/clinica"}>
             <MenubarTrigger>A Clínica</MenubarTrigger>

@@ -46,7 +46,9 @@ export default function MenuMobile() {
               </Link>{" "}
             </MenubarMenu>
             <MenubarMenu>
-              <MenubarTrigger>Nossa Equipe</MenubarTrigger>
+              <Link href={"/equipe"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <MenubarTrigger>Nossa Equipe</MenubarTrigger>
+              </Link>{" "}
             </MenubarMenu>
             <MenubarMenu>
               <Link
@@ -59,11 +61,9 @@ export default function MenuMobile() {
             <MenubarMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <MenubarTrigger>
-                    Exames e Tratamentos
-                  </MenubarTrigger>
+                  <MenubarTrigger>Exames e Tratamentos</MenubarTrigger>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent  >
+                <DropdownMenuContent className="flex gap-4 flex-col">
                   <DropdownMenuItem>Exame de Sangue</DropdownMenuItem>
                   <DropdownMenuItem>Ultrassonografia</DropdownMenuItem>
                   <DropdownMenuItem>Ressonância Magnética</DropdownMenuItem>
