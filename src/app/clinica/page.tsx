@@ -122,32 +122,32 @@ const Clinica = () => {
               className="absolute transition-all  hover:scale-150 text-primary t  m-4 right-0 top-0"
             />
           </div>
-         
         </div>
       </div>
 
       {isFullScreen && fullScreenImage && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-    <div className="bg-white p-4 rounded-lg shadow-lg">
-      <Image
-        src={fullScreenImage}
-        alt="Clínica"
-        width={1200}
-        height={720}
-        className="rounded-lg"
-      />
-      <X
-        size={25}
-        className="absolute text-white m-4 right-0 top-0 cursor-pointer"
-        onClick={() => {
-          setIsFullScreen(false);
-          setFullScreenImage(null); // Limpe o estado da imagem em tela cheia
-        }}
-      />
-    </div>
-  </div>
-)}
-
+        <div className="fixed inset-0    bg-opacity-50 z-50 flex justify-center items-center max-w-[100vw]">
+          <div className="  flex flex-col items-center   bg-white p-4 rounded-lg shadow-lg">
+            <div className='flex   '>
+              <Image
+                src={fullScreenImage}
+                alt="Clínica"
+                width={700}
+                height={720}
+                className="rounded-lg "
+              ></Image>
+              <X
+                size={25}
+                className="absolute  text-white bg-primary rounded-md m-4  cursor-pointer"
+                onClick={() => {
+                  setIsFullScreen(false);
+                  setFullScreenImage(null); // Limpe o estado da imagem em tela cheia
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
