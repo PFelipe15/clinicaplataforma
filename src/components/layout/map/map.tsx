@@ -76,7 +76,7 @@ import ButtonConsulta from "../buttonConsulta";
               </GoogleMap>
             </div>
             <div className="  flex flex-col  items-center justify-center gap-2 font-bold text-primary  p-8   ">
-              <h2 className="text-3xl  font-semibold mb-4">
+              <h2 className="hidden md:block text-3xl  font-semibold mb-4">
                 Localização da Clínica
               </h2>
               <div className="flex flex-col items-center justify-center gap-4">
