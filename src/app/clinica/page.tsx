@@ -126,8 +126,8 @@ const Clinica = () => {
       </div>
 
       {isFullScreen && fullScreenImage && (
-        <div className="fixed inset-0    bg-opacity-50 z-50 flex justify-center items-center max-w-[100vw]">
-          <div className="  flex flex-col items-center   bg-white p-4 rounded-lg shadow-lg">
+        <div className="fixed inset-0  bg-opacity-50 z-50 flex justify-center items-center max-w-[100vw]">
+          <div className="  flex flex-col items-center bg-white p-4 rounded-lg shadow-lg">
             <div className='flex   '>
               <Image
                 src={fullScreenImage}
@@ -141,7 +141,7 @@ const Clinica = () => {
                 className="absolute  text-white bg-primary rounded-md m-4  cursor-pointer"
                 onClick={() => {
                   setIsFullScreen(false);
-                  setFullScreenImage(null); // Limpe o estado da imagem em tela cheia
+                  setFullScreenImage(null);  
                 }}
               />
             </div>

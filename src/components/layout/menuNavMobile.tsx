@@ -24,7 +24,7 @@ export default function MenuMobile() {
         <MenuIcon className="h-6 w-6 text-secondary" />
       </button>
       {isMenuOpen && (
-        <div className="absolute top-0 right-0 bg-white w-full h-screen shadow-md">
+        <div className="absolute left-0 top-0   bg-white w-screen h-screen shadow-md">
           <button
             className="p-2 rounded-md focus:outline-none focus:ring focus:border-blue-300 "
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -59,11 +59,11 @@ export default function MenuMobile() {
             <MenubarMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <MenubarTrigger className="flex gap-2  ">
+                  <MenubarTrigger>
                     Exames e Tratamentos
                   </MenubarTrigger>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start">
+                <DropdownMenuContent  >
                   <DropdownMenuItem>Exame de Sangue</DropdownMenuItem>
                   <DropdownMenuItem>Ultrassonografia</DropdownMenuItem>
                   <DropdownMenuItem>Ressonância Magnética</DropdownMenuItem>
