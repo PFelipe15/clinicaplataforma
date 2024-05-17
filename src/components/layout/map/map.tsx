@@ -44,7 +44,7 @@ import ButtonConsulta from "../buttonConsulta";
       return isLoaded ? (
         <div className="container flex flex-col  shadow-md p-2 my-8  ">
           <div className="  flex flex-col  md:flex-row gap-4">
-            <div className=" rounded-lg  flex-1">
+            <div className=" rounded-lg  flex-col   flex-1">
               <GoogleMap
                 options={options}
                 mapContainerStyle={containerStyle}
@@ -79,7 +79,7 @@ import ButtonConsulta from "../buttonConsulta";
               <h2 className="text-3xl font-semibold mb-4">
                 Localização da Clínica
               </h2>
-              <div className="flex flex-col items-center justify-center gap-4">
+              <div className="flex flex-col  items-center justify-center gap-4">
                 <div className="flex items-center justify-center">
                   <MapPin size="32" className="text-primary" />
                   <p>Rua Fictícia, 123 </p>

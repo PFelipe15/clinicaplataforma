@@ -1,6 +1,7 @@
 'use client'
+import Link from 'next/link';
  import { Menubar, MenubarMenu, MenubarTrigger,   } from '@/components/ui/menubar';
-import {   ArrowDown, MenuIcon, X } from 'lucide-react';
+import {     MenuIcon, X } from 'lucide-react';
 import React, { useState } from 'react';
 import {
   DropdownMenu,
@@ -31,8 +32,10 @@ export default function MenuMobile() {
             <X className="h-6 w-6 text-secondary" />
           </button>
           <Menubar className="flex font-bold text-white flex-col gap-4 items-center ">
-            <MenubarMenu  >
-              <MenubarTrigger className=''>Home</MenubarTrigger>
+            <MenubarMenu>
+              <Link href={"/"}  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <MenubarTrigger>Home</MenubarTrigger>
+              </Link>
             </MenubarMenu>
             <MenubarMenu>
               <MenubarTrigger>Quem Somos</MenubarTrigger>
@@ -41,16 +44,18 @@ export default function MenuMobile() {
               <MenubarTrigger>Nossa Equipe</MenubarTrigger>
             </MenubarMenu>
             <MenubarMenu>
-              <MenubarTrigger>A Clínica</MenubarTrigger>
+              <Link href={"/clinica"}  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <MenubarTrigger>A Clinica</MenubarTrigger>
+              </Link>{" "}
             </MenubarMenu>
             <MenubarMenu>
               <DropdownMenu>
-                <DropdownMenuTrigger asChild >
+                <DropdownMenuTrigger asChild>
                   <MenubarTrigger className="flex gap-2  ">
                     Exames e Tratamentos
                   </MenubarTrigger>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align='start'>
+                <DropdownMenuContent align="start">
                   <DropdownMenuItem>Exame de Sangue</DropdownMenuItem>
                   <DropdownMenuItem>Ultrassonografia</DropdownMenuItem>
                   <DropdownMenuItem>Ressonância Magnética</DropdownMenuItem>
