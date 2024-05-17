@@ -33,18 +33,26 @@ export default function MenuMobile() {
           </button>
           <Menubar className="flex font-bold text-white flex-col gap-4 items-center ">
             <MenubarMenu>
-              <Link href={"/"}  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Link href={"/"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <MenubarTrigger>Home</MenubarTrigger>
               </Link>
             </MenubarMenu>
             <MenubarMenu>
-              <MenubarTrigger>Quem Somos</MenubarTrigger>
+              <Link
+                href={"/about-me"}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                <MenubarTrigger>Quem Somos</MenubarTrigger>
+              </Link>{" "}
             </MenubarMenu>
             <MenubarMenu>
               <MenubarTrigger>Nossa Equipe</MenubarTrigger>
             </MenubarMenu>
             <MenubarMenu>
-              <Link href={"/clinica"}  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Link
+                href={"/clinica"}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
                 <MenubarTrigger>A Clinica</MenubarTrigger>
               </Link>{" "}
             </MenubarMenu>

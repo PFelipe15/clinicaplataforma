@@ -14,14 +14,14 @@ export default function MenuNav() {
     return (
       <Menubar>
         <MenubarMenu>
-        <Link href={"/"}>
-          <MenubarTrigger>Home</MenubarTrigger>
-
-        </Link>
-
+          <Link href={"/"}>
+            <MenubarTrigger>Home</MenubarTrigger>
+          </Link>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>Quem Somos</MenubarTrigger>
+          <Link href={"/about-me"}>
+            <MenubarTrigger>Quem Somos</MenubarTrigger>
+          </Link>{" "}
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger>Nossa Equipe</MenubarTrigger>
