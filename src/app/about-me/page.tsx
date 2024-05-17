@@ -27,7 +27,7 @@ export default function QuemSomos() {
     ];
 
     return (
-        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8 animate-fadeIn">
             <h1 className="text-3xl font-extrabold text-center mb-12 text-primary">Quem Somos</h1>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
                 {owners.map((owner, index) => (

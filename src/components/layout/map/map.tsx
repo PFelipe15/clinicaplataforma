@@ -76,27 +76,27 @@ import ButtonConsulta from "../buttonConsulta";
               </GoogleMap>
             </div>
             <div className="  flex flex-col  items-center justify-center gap-2 font-bold text-primary  p-8   ">
-              <h2 className="text-3xl font-semibold mb-4">
+              <h2 className="text-3xl  font-semibold mb-4">
                 Localização da Clínica
               </h2>
-              <div className="flex flex-col  items-center justify-center gap-4">
-                <div className="flex items-center justify-center">
-                  <MapPin size="32" className="text-primary" />
-                  <p>Rua Fictícia, 123 </p>
-                </div>
-                <div className="flex items-center justify-center">
-                  <MapPin size="32" className="text-primary" />
-                  <p>Bairro Imaginário, Cidade Inexistente</p>
-                </div>
-                <div className="flex items-center justify-center">
-                  <MapPin size="32" className="text-primary" />
-                  <p>CEP: 00000-000</p>
-                </div>
-                <div className="flex items-center justify-center">
-                  <MapPin size="32" className="text-primary" />
-                  <p>Estado, País</p>
-                </div>
-              </div>
+              <div className="flex flex-col items-center justify-center gap-4">
+    <div className="flex items-center justify-center">
+        <MapPin size="32" className="text-primary" />
+        <p>Rua Saúde, 456</p>
+    </div>
+    <div className="flex items-center justify-center">
+        <MapPin size="32" className="text-primary" />
+        <p>Bairro Bem-Estar, Cidade Vida</p>
+    </div>
+    <div className="flex items-center justify-center">
+        <MapPin size="32" className="text-primary" />
+        <p>CEP: 12345-678</p>
+    </div>
+    <div className="flex items-center justify-center">
+        <MapPin size="32" className="text-primary" />
+        <p>Estado Saúde, País Bem-Estar</p>
+    </div>
+</div>
               <ButtonConsulta/>
             </div>
           </div>
