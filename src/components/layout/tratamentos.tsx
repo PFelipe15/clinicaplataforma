@@ -22,8 +22,8 @@ export default function Tratamentos() {
   ];
 
   return (
-    <div className="container flex  items-center w-full justify-center  flex-col">
-      <h1 className="text-3xl text-center text-primary font-semibold mb-8 animate-fadeIn">
+    <div className="container flex  items-center  w-[100vw] justify-center  flex-col">
+      <h1 className=" text-3xl text-center text-primary font-semibold mb-8 animate-fadeIn">
         <span className="animate-typing">Nossas especialidades</span>
         <br />
         conheça nossos principais tratamentos

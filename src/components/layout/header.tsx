@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import ButtonConsulta from "./buttonConsulta";
 import Logo from "./logo";
 import MenuNav from "./menuNav";
 import MenuMobile from "./menuNavMobile";
@@ -10,8 +11,8 @@ export function Header() {
        <div className="hidden md:block">
         <MenuNav />
       </div>
-      <Button className=" text-sm md:text-base">Agendar consulta</Button>
-       <div className="md:hidden">
+      <ButtonConsulta/>
+        <div className="md:hidden">
         <MenuMobile />
       </div>
     </div>

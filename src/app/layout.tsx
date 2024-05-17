@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { Header } from "@/components/layout/header";
 import { Raleway } from 'next/font/google'
 import Map from "@/components/layout/map/map";
+import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,6 +32,8 @@ export default function RootLayout({
           </main>
 
           <Map/>
+<Footer/>
+
       </body>
     </html>
   );

@@ -34,6 +34,8 @@
       --radius: 0.5rem;
     }
 
+
+    
     .dark {
       --background: 222.2 84% 4.9%;
       --foreground: 210 40% 98%;
@@ -64,6 +66,14 @@
       --ring: 212.7 26.8% 83.9%;
     }
 
+    .font-outline-2 {
+      -webkit-text-stroke: 2px black;
+    }
+    .font-outline-4 {
+      -webkit-text-stroke: 4px black;
+    }
+
+
    @keyframes fadeIn {
     from {
       opacity: 0;
@@ -72,6 +82,17 @@
       opacity: 1;
     }
   }
+
+
+  @keyframes animate-banner {
+    0% {
+      transform: translateY(-10px);  
+    }
+    100% {
+      transform: translateY(10px) 
+    }
+  }
+  
   
   .animate-fadeIn {
     animation: fadeIn 2s ease-in forwards;
@@ -85,4 +106,10 @@
     body {
       @apply bg-background text-foreground;
     }
+  }
+
+
+  .bg-banner2 {
+    background-color: #007bff; /* Azul */
+    animation: animate-banner 1.5s ease-in-out infinite alternate; /* Aplica a animação */
   }
