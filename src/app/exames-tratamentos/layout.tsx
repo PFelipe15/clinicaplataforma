@@ -10,9 +10,7 @@ export default function RootLayout({
     <main className="flex-grow flex container flex-col items-center  animate-fadeIn ">
       <NavigationUrls />
       {children}
-      <Link href="/">
-        <Button className="m-4 self-end">Voltar</Button>
-      </Link>
+    
     </main>
   );
 }

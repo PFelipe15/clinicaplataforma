@@ -15,11 +15,9 @@ import {
 export function NavigationUrls() {
     const pathname = usePathname();
     
-    // Split the pathname into segments
-    const pathSegments = pathname.split('/').filter(segment => segment);
+     const pathSegments = pathname.split('/').filter(segment => segment);
 
-    // If there are no segments, set the rest of pathname as an empty string
-    const restOfPathname = pathSegments.length > 1 ? '/' + pathSegments.slice(1).join('/') : '';
+     const restOfPathname = pathSegments.length >= 1 ? '/' + pathSegments.slice(1).join('/') : '';
 
     return (
         <Breadcrumb className="m-2 ">

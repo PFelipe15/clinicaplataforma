@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Raleway } from 'next/font/google'
 import Map from "@/components/layout/map/map";
 import Footer from "@/components/layout/footer";
+import BackButton from "@/components/layout/backButton";
 
 export const metadata: Metadata = {
   title: "Urovida",
@@ -22,21 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body
-        className={cn(
-          "min-h-screen flex flex-col     ",
-          poetsen.className
-        )}
+        className={cn("min-h-screen flex flex-col     ", poetsen.className)}
       >
         <Header />
-          <main className="flex-grow  animate-fadeIn ">
-            {children}
-          </main>
+        <main className="flex flex-col container items-center  animate-fadeIn ">
+          {children}
 
-          <Map/>
-<Footer/>
+          <BackButton />
+        </main>
 
+        <Map />
+        <Footer />
       </body>
     </html>
   );

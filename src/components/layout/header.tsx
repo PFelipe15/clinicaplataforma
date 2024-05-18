@@ -1,5 +1,4 @@
-import { Button } from "../ui/button";
-import ButtonConsulta from "./buttonConsulta";
+ import ButtonConsulta from "./buttonConsulta";
 import Logo from "./logo";
 import MenuNav from "./menuNav";
 import MenuMobile from "./menuNavMobile";
