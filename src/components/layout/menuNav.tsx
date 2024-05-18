@@ -41,7 +41,10 @@ export default function MenuNav() {
             <MenubarSub>
               <MenubarSubTrigger>Urologia</MenubarSubTrigger>
               <MenubarSubContent>
-                <Link href={"/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"}>
+                <Link href={
+                    "/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"
+                  }
+                >
                   <MenubarItem>
                     Ultrassonografia Abdominal e Pélvica
                   </MenubarItem>
@@ -58,13 +61,13 @@ export default function MenuNav() {
               <MenubarSubTrigger>Nefrologia</MenubarSubTrigger>
               <MenubarSubContent>
                 <Link href={"/exames-tratamentos/nefrologia/exame-de-urina"}>
-                  <MenubarItem>
-                  Exame de Urina (EAS)                  </MenubarItem>
+                  <MenubarItem>Exame de Urina (EAS) </MenubarItem>
                 </Link>
-                <Link href={"/exames-tratamentos/nefrologia/ultrassonografia-renal"}>
+                <Link
+                  href={"/exames-tratamentos/nefrologia/ultrassonografia-renal"}
+                >
                   <MenubarItem>Ultrassonografia Renal</MenubarItem>
                 </Link>
-               
               </MenubarSubContent>
             </MenubarSub>
           </MenubarContent>

@@ -64,12 +64,44 @@ export default function MenuMobile() {
                   <MenubarTrigger>Exames e Tratamentos</MenubarTrigger>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="flex gap-4 flex-col">
-                  <DropdownMenuItem>Exame de Sangue</DropdownMenuItem>
-                  <DropdownMenuItem>Ultrassonografia</DropdownMenuItem>
-                  <DropdownMenuItem>Ressonância Magnética</DropdownMenuItem>
-                  <DropdownMenuItem>Fisioterapia</DropdownMenuItem>
-                  <DropdownMenuItem>Acupuntura</DropdownMenuItem>
-                  <DropdownMenuItem>Psicoterapia</DropdownMenuItem>
+                   <Link
+                                      onClick={() => setIsMenuOpen(!isMenuOpen)}
+
+                    href={
+                      "/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"
+                    }
+                  >
+                    <DropdownMenuItem>
+                      Ultrassonografia Abdominal e Pélvica
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link
+                    href={"/exames-tratamentos/urologia/Urodinamica"}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
+                    <DropdownMenuItem>Urodinâmica</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    href={"/exames-tratamentos/urologia/Urofluxometria"}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
+                    <DropdownMenuItem>Urofluxometria</DropdownMenuItem>
+                  </Link>
+
+                  <Link
+                    href={"/exames-tratamentos/nefrologia/exame-de-urina"}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
+                    <DropdownMenuItem>Exame de Urina (EAS) </DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={
+                      "/exames-tratamentos/nefrologia/ultrassonografia-renal"
+                    }
+                  >
+                    <DropdownMenuItem>Ultrassonografia Renal</DropdownMenuItem>
+                  </Link>
                 </DropdownMenuContent>
               </DropdownMenu>
             </MenubarMenu>
