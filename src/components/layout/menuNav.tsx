@@ -24,9 +24,10 @@ export default function MenuNav() {
           </Link>{" "}
         </MenubarMenu>
         <MenubarMenu>
-        <Link href={"/equipe"}>
+          <Link href={"/equipe"}>
             <MenubarTrigger>Nossa Equipe</MenubarTrigger>
-          </Link>{" "}        </MenubarMenu>
+          </Link>{" "}
+        </MenubarMenu>
         <MenubarMenu>
           <Link href={"/clinica"}>
             <MenubarTrigger>A Clínica</MenubarTrigger>
@@ -38,19 +39,32 @@ export default function MenuNav() {
           </MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
-              <MenubarSubTrigger>Exames</MenubarSubTrigger>
+              <MenubarSubTrigger>Urologia</MenubarSubTrigger>
               <MenubarSubContent>
-                <MenubarItem>Exame de Sangue</MenubarItem>
-                <MenubarItem>Ultrassonografia</MenubarItem>
-                <MenubarItem>Ressonância Magnética</MenubarItem>
+                <Link href={"/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"}>
+                  <MenubarItem>
+                    Ultrassonografia Abdominal e Pélvica
+                  </MenubarItem>
+                </Link>
+                <Link href={"/exames-tratamentos/urologia/Urodinamica"}>
+                  <MenubarItem>Urodinâmica</MenubarItem>
+                </Link>
+                <Link href={"/exames-tratamentos/urologia/Urofluxometria"}>
+                  <MenubarItem>Urofluxometria</MenubarItem>
+                </Link>
               </MenubarSubContent>
             </MenubarSub>
             <MenubarSub>
-              <MenubarSubTrigger>Tratamentos</MenubarSubTrigger>
+              <MenubarSubTrigger>Nefrologia</MenubarSubTrigger>
               <MenubarSubContent>
-                <MenubarItem>Fisioterapia</MenubarItem>
-                <MenubarItem>Acupuntura</MenubarItem>
-                <MenubarItem>Psicoterapia</MenubarItem>
+                <Link href={"/exames-tratamentos/nefrologia/exame-de-urina"}>
+                  <MenubarItem>
+                  Exame de Urina (EAS)                  </MenubarItem>
+                </Link>
+                <Link href={"/exames-tratamentos/nefrologia/ultrassonografia-renal"}>
+                  <MenubarItem>Ultrassonografia Renal</MenubarItem>
+                </Link>
+               
               </MenubarSubContent>
             </MenubarSub>
           </MenubarContent>
