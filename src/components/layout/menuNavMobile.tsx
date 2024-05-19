@@ -68,7 +68,7 @@ export default function MenuMobile() {
                                       onClick={() => setIsMenuOpen(!isMenuOpen)}
 
                     href={
-                      "/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"
+                      "/exames-tratamentos/urologia/ultrassonografia-Abdominal-e-Pelvica"
                     }
                   >
                     <DropdownMenuItem>
@@ -76,13 +76,13 @@ export default function MenuMobile() {
                     </DropdownMenuItem>
                   </Link>
                   <Link
-                    href={"/exames-tratamentos/urologia/Urodinamica"}
+                    href={"/exames-tratamentos/urologia/urodinamica"}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                   >
                     <DropdownMenuItem>Urodinâmica</DropdownMenuItem>
                   </Link>
                   <Link
-                    href={"/exames-tratamentos/urologia/Urofluxometria"}
+                    href={"/exames-tratamentos/urologia/urofluxometria"}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                   >
                     <DropdownMenuItem>Urofluxometria</DropdownMenuItem>
