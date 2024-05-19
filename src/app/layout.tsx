@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn("min-h-screen flex flex-col     ", poetsen.className)}
+        className={cn("min-h-screen  flex flex-col   ", poetsen.className)}
       >
         <Header />
         <main className="flex flex-col container items-center  animate-fadeIn ">

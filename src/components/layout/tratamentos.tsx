@@ -20,12 +20,12 @@ export default function Tratamentos() {
           {especialidades.map((tratamento, index) => (
             <CarouselItem
               key={index}
-              className="pl-4 md:basis-1/2 lg:basis-1/3 h"
+              className="pl-4 flex   items-center justify-center sm:basis-full md:basis-1/2 lg:basis-1/3 h"
             >
               <Link href={"/"} key={index}>
                 <div
                   key={tratamento.nome}
-                  className="bg-white rounded-lg  shadow-lg p-6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+                  className="bg-white rounded-lg  max-w-sm  shadow-lg p-6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
                 >
                   <Image
                     src={tratamento.imagem}
@@ -34,10 +34,10 @@ export default function Tratamentos() {
                     height={400}
                     className="rounded-lg mb-4"
                   />
-                  <h2 className="text-xl font-semibold mb-2">
+                  <h2 className="text-xl  font-semibold mb-2">
                     {tratamento.nome}
                   </h2>
-                  <p className="text-gray-600">{tratamento.descricao}</p>
+                  <p className="text-gray-600 max-w-sm">{tratamento.descricao}</p>
                 </div>
               </Link>
             </CarouselItem>
