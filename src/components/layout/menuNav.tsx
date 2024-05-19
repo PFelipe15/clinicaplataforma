@@ -42,17 +42,17 @@ export default function MenuNav() {
               <MenubarSubTrigger>Urologia</MenubarSubTrigger>
               <MenubarSubContent>
                 <Link href={
-                    "/exames-tratamentos/urologia/ultrassonografia-Abdominal-e-Pelvica"
+                    "/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"
                   }
                 >
                   <MenubarItem>
                     Ultrassonografia Abdominal e Pélvica
                   </MenubarItem>
                 </Link>
-                <Link href={"/exames-tratamentos/urologia/urodinamica"}>
+                <Link href={"/exames-tratamentos/urologia/Urodinamica"}>
                   <MenubarItem>Urodinâmica</MenubarItem>
                 </Link>
-                <Link href={"/exames-tratamentos/urologia/urofluxometria"}>
+                <Link href={"/exames-tratamentos/urologia/Urofluxometria"}>
                   <MenubarItem>Urofluxometria</MenubarItem>
                 </Link>
               </MenubarSubContent>
