@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex-grow flex container flex-col items-center  animate-fadeIn ">
+    <main className="flex-grow md:container flex flex-col items-start  w-[100vw]   animate-fadeIn ">
       <NavigationUrls />
       {children}
     
