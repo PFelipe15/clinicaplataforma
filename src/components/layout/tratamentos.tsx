@@ -20,7 +20,7 @@ export default function Tratamentos() {
           {especialidades.map((tratamento, index) => (
             <CarouselItem
               key={index}
-              className="pl-4 flex   items-center justify-center sm:basis-full md:basis-1/2 lg:basis-1/3 h"
+              className=" flex   items-center justify-center sm:basis-full md:basis-1/2 lg:basis-1/3 h"
             >
               <Link href={"/"} key={index}>
                 <div
