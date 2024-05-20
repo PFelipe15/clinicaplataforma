@@ -82,19 +82,19 @@ import ButtonConsulta from "../buttonConsulta";
               <div className="flex flex-col items-center justify-center gap-4">
     <div className="flex items-center justify-center">
         <MapPin size="32" className="text-primary" />
-        <p>Rua Saúde, 456</p>
+        <p>Avenida Senador Area Leao, 1480</p>
     </div>
     <div className="flex items-center justify-center">
         <MapPin size="32" className="text-primary" />
-        <p>Bairro Bem-Estar, Cidade Vida</p>
+        <p>Bairro Jóquei, Terezina.</p>
     </div>
     <div className="flex items-center justify-center">
         <MapPin size="32" className="text-primary" />
-        <p>CEP: 12345-678</p>
+        <p>CEP: 64049110</p>
     </div>
     <div className="flex items-center justify-center">
         <MapPin size="32" className="text-primary" />
-        <p>Estado Saúde, País Bem-Estar</p>
+        <p>Piaui, Brazil</p>
     </div>
 </div>
               <ButtonConsulta/>
@@ -106,14 +106,14 @@ import ButtonConsulta from "../buttonConsulta";
               onClick={handleEmailMouseOver}
             >
               <Mail size="32" className="text-primary" />
-              <p>secretaria@giulianoaita.com.br</p>
+              <p>urovida@gmail.com.br</p>
             </div>
             <div
               className="flex gap-2 items-center hover:scale-105 transition-all"
               onClick={handlePhoneMouseOver}
             >
               <MessageCircle size="32" className="text-primary" />
-              <p>(86) 99415-6897</p>
+              <p>(86) 999337249</p>
             </div>
           </div>
         </div>
