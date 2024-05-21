@@ -111,8 +111,8 @@ export function Main() {
         <div className="max-w-[100vw] h-[400px] w-[720px]  relative flex-col    bg-banner2 bg-cover  flex items-center  justify-center  ">
           <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
           <h1 className="relative m-4 font-bold p-2 rounded-md text-center text-secondary text-3xl ">
-            Na nossa Clínica, sua vida é nossa principal preocupação. Estamos
-            aqui para você, em todos os aspectos, sempre.
+            Para nós da <span className="text-black">UROVIDA</span>, a sua vida é nossa principal
+            preocupação. Estamos com você em todos os aspectos, sempre.
           </h1>
           <Link href="/clinica" className="animate-fadeIn opacity-0">
             <Button className="bg-primary font-semibold text-white">
@@ -122,11 +122,11 @@ export function Main() {
         </div>
 
         <div className="flex container bg-secondary text-white flex-col py-10 my-10 rounded-md items-center w-full justify-center">
-          <div className="my-4">
+          <div className="mb-4">
             <h2 className="text-4xl font-bold text-center ">
               Tratamentos Populares
             </h2>
-            <p className=" text-xl font-bold  text-center  ">
+            <p className=" text-xl font-bold  text-center   ">
               Contamos com especialistas em Urologia, Nefrologia, Radiologia,
               Fisioterapia, Ginecologia e Cirurgia Plástica
             </p>
