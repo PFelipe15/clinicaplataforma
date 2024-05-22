@@ -1,7 +1,7 @@
-'use client'
+'use client';
 import React, { useEffect, useState } from "react";
-import { GoogleMap, useJsApiLoader,   StreetViewPanorama, Marker } from '@react-google-maps/api';
- import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { GoogleMap, useJsApiLoader, StreetViewPanorama, Marker } from '@react-google-maps/api';
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 import ButtonConsulta from "../buttonConsulta";
 
 type WindowSize = {
@@ -12,10 +12,9 @@ type WindowSize = {
 export default function Map() {
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState<WindowSize>({
-      width: window.innerWidth || 0,
-      height: window.innerHeight || 0,
+      width: typeof window !== 'undefined' ? window.innerWidth || 0 : undefined,
+      height: typeof window !== 'undefined' ? window.innerHeight || 0 : undefined,
     });
-    
 
     useEffect(() => {
       const handleResize = () => {
@@ -46,7 +45,7 @@ export default function Map() {
   const size = useWindowSize();
 
   const containerStyle = {
-    width: size.width !== undefined? size.width <= 768 ? "400px" : "990px" : 0,
+    width: size.width !== undefined ? (size.width <= 768 ? "400px" : "990px") : 0,
     height: "400px",
   };
 
