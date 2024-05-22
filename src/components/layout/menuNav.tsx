@@ -39,36 +39,57 @@ export default function MenuNav() {
           </MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
-              <MenubarSubTrigger>Urologia</MenubarSubTrigger>
+              <MenubarSubTrigger>Exames</MenubarSubTrigger>
               <MenubarSubContent>
-                <Link href={
-                    "/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"
+                <Link href={"/exames-tratamentos/exames/citoscopia-rigida"}>
+                  <MenubarItem>Cistoscopia Rigida</MenubarItem>
+                </Link>
+                <Link href={"/exames-tratamentos/exames/citoscopia-flexivel"}>
+                  <MenubarItem>Cistoscopia Flexível</MenubarItem>
+                </Link>
+                <Link
+                  href={
+                    "/exames-tratamentos/exames/teste-erecao-farmaco-induzida"
                   }
                 >
-                  <MenubarItem>
-                    Ultrassonografia Abdominal e Pélvica
-                  </MenubarItem>
+                  <MenubarItem>Teste de Ereção Fármaco-Induzida</MenubarItem>
                 </Link>
-                <Link href={"/exames-tratamentos/urologia/Urodinamica"}>
+                <Link href={"/exames-tratamentos/exames/urodinamica"}>
                   <MenubarItem>Urodinâmica</MenubarItem>
                 </Link>
-                <Link href={"/exames-tratamentos/urologia/Urofluxometria"}>
-                  <MenubarItem>Urofluxometria</MenubarItem>
+                <Link href={"/exames-tratamentos/exames/urodinamica-completa"}>
+                  <MenubarItem>Urodinâmica Completa</MenubarItem>
                 </Link>
               </MenubarSubContent>
             </MenubarSub>
             <MenubarSub>
-              <MenubarSubTrigger>Nefrologia</MenubarSubTrigger>
+              <MenubarSubTrigger>Tratamentos</MenubarSubTrigger>
               <MenubarSubContent>
-                <Link href={"/exames-tratamentos/nefrologia/exame-de-urina"}>
-                  <MenubarItem>Exame de Urina (EAS) </MenubarItem>
-                </Link>
-                <Link
-                  href={"/exames-tratamentos/nefrologia/ultrassonografia-renal"}
-                >
-                  <MenubarItem>Ultrassonografia Renal</MenubarItem>
-                </Link>
-              </MenubarSubContent>
+    <Link href={"/exames-tratamentos/tratamentos/biopsia-peniana"}>
+        <MenubarItem>Biópsia Peniana</MenubarItem>
+    </Link>
+    <Link href={"/exames-tratamentos/tratamentos/crioterapia"}>
+        <MenubarItem>Crioterapia</MenubarItem>
+    </Link>
+    <Link href={"/exames-tratamentos/tratamentos/dilatacao-uretral"}>
+        <MenubarItem>Dilatação Uretral</MenubarItem>
+    </Link>
+    <Link href={"/exames-tratamentos/tratamentos/fisioterapia-pelvica"}>
+        <MenubarItem>Fisioterapia Pélvica</MenubarItem>
+    </Link>
+    <Link href={"/exames-tratamentos/tratamentos/implantes-hormonais"}>
+        <MenubarItem>Implantes Hormonais</MenubarItem>
+    </Link>
+    <Link href={"/exames-tratamentos/tratamentos/terapia-por-ondas-de-choque"}>
+        <MenubarItem>Terapia por Ondas de Choque</MenubarItem>
+    </Link>
+    <Link href={"/exames-tratamentos/tratamentos/postectomia"}>
+        <MenubarItem>Postectomia</MenubarItem>
+    </Link>
+    <Link href={"/exames-tratamentos/tratamentos/vasectomia"}>
+        <MenubarItem>Vasectomia</MenubarItem>
+    </Link>
+</MenubarSubContent>
             </MenubarSub>
           </MenubarContent>
         </MenubarMenu>

@@ -1,11 +1,15 @@
-import Image from "next/image";
-import ImageExample from "../../app/assets/347421952_1446950042802881_739511864334827390_n.jpg";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
- import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../ui/carousel";
- import { especialidades } from "@/app/services";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../ui/carousel";
+import { exames } from "@/app/services";
 
 export default function Tratamentos() {
-  
+  interface Exame {
+    nome: string;
+    descricao: string;
+    imagem:   StaticImageData; // Corrigido para o tipo StaticImageData
+    link: string;
+  }
 
   return (
     <div className="container flex  items-center  w-[100vw] justify-center  flex-col">
@@ -15,33 +19,32 @@ export default function Tratamentos() {
 
       <Carousel className="flex ">
         <CarouselContent className=" ">
-          {especialidades.map((tratamento, index) => (
+          {exames.map((exame: Exame, index: number) => (
             <CarouselItem
               key={index}
               className=" flex   items-center justify-center sm:basis-full md:basis-1/2 lg:basis-1/3 h"
             >
-              <Link href={"/"} key={index}>
+              <Link href={exame.link} key={index}>
                 <div
-                  key={tratamento.nome}
+                  key={index}
                   className="bg-white rounded-lg  max-w-sm  shadow-lg p-6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
                 >
                   <Image
-                    src={tratamento.imagem}
-                    alt={tratamento.nome}
+                    src={exame.imagem}
+                    alt={exame.nome}
                     width={400}
                     height={400}
                     className="rounded-lg mb-4"
                   />
                   <h2 className="text-xl  font-semibold mb-2">
-                    {tratamento.nome}
+                    {exame.nome}
                   </h2>
-                  <p className="text-gray-600 max-w-sm">{tratamento.descricao}</p>
+                  <p className="text-gray-600 max-w-sm">{exame.descricao}</p>
                 </div>
               </Link>
             </CarouselItem>
           ))}
 
-          
         </CarouselContent>
         <CarouselPrevious className="  bg-secondary  hover:bg-black -left-[50px]" />
           <CarouselNext className="hover:bg-black -right-[50px] " />

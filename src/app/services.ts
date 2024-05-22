@@ -1,60 +1,59 @@
 import ImageExample from "./assets/347421952_1446950042802881_739511864334827390_n.jpg";
 
-const especialidades = [
+const exames = [
   {
-    nome: "Urologia",
-    descricao:
-      "Especialidade médica que trata o sistema urinário e reprodutor masculino.",
+    nome: "Cistoscopia Rígida",
+    descricao: "A Cistoscopia Rígida é um exame endoscópico que permite a visualização do interior da bexiga e da uretra através de um cistoscópio rígido.",
     imagem: ImageExample,
+    link: "/exames-tratamentos/exames/citoscopia-rigida",
   },
   {
-    nome: "Nefrologia",
-    descricao: "Estudo e tratamento das doenças dos rins e sistema urinário.",
+    nome: "Cistoscopia Flexível",
+    descricao: "A Cistoscopia Flexível é um exame endoscópico que permite a visualização do interior da bexiga e da uretra através de um cistoscópio flexível.",
     imagem: ImageExample,
+    link: "/exames-tratamentos/exames/citoscopia-flexivel",
+  },
+  {
+    nome: "Teste de Ereção Fármaco-Induzida",
+    descricao: "O Teste de Ereção Fármaco-Induzida é um procedimento em que uma medicação é injetada no pênis para avaliar a função erétil.",
+    imagem: ImageExample,
+    link: "/exames-tratamentos/exames/teste-erecao-farmaco-induzida",
+  },
+  {
+    nome: "Urodinâmica Completa",
+    descricao: "A Urodinâmica Completa é um conjunto de exames que avalia o funcionamento da bexiga e da uretra, medindo as pressões e os fluxos urinários.",
+    imagem: ImageExample,
+    link: "/exames-tratamentos/exames/urodinamica-completa",
   },
 
-  {
-    nome: "Medicina da Dor",
-    descricao: "Abordagem médica para diagnóstico e tratamento da dor crônica.",
-    imagem: ImageExample,
-  },
-
-  {
-    nome: "Acupuntura",
-    descricao:
-      "Terapia tradicional chinesa usando agulhas para alívio de sintomas.",
-    imagem: ImageExample,
-  },
-  {
-    nome: "Fisioterapia Pélvica",
-    descricao: "Tratamento de disfunções do assoalho pélvico e região pélvica.",
-    imagem: ImageExample,
-  },
 ];
+
+
   
 
-const populares = [
+const procedimentosPopulares = [
   {
-    title: "Exame de Urina (EAS)",
+    title: "Vasectomia",
     descricao:
-      "O Exame de Urina, também conhecido como EAS (Exame de Análise de Sedimento), é um teste laboratorial simples e de rotina que analisa a composição da urina. Ele ajuda a diagnosticar e monitorar uma variedade de condições médicas, como infecções urinárias, doenças renais, diabetes e outras desordens metabólicas.",
+      "A Vasectomia é um procedimento cirúrgico de esterilização masculina que corta e sela os canais deferentes, impedindo o transporte de espermatozoides.",
     imagem: ImageExample,
-    link: "/exames-tratamentos/nefrologia/exame-de-urina",
+    link: "/exames-tratamentos/tratamentos/vasectomia",
   },
   {
-    title: "Ultrassonografia Renal",
+    title: "Terapia por Ondas de Choque",
     descricao:
-      "A ultrassonografia renal é um exame de imagem que utiliza ondas sonoras de alta frequência para criar imagens dos rins e estruturas adjacentes. É um procedimento seguro, não invasivo e amplamente utilizado para avaliar a saúde renal e diagnosticar várias condições.",
+      "A Terapia por Ondas de Choque é um tratamento não invasivo que utiliza ondas acústicas de alta intensidade para estimular a regeneração dos tecidos e melhorar a circulação sanguínea, sendo utilizada para tratar disfunções eréteis e outras condições.",
     imagem: ImageExample,
-    link: "/exames-tratamentos/nefrologia/ultrassonografia-renal",
+    link: "/exames-tratamentos/tratamentos/terapia-por-ondas-de-choque",
   },
   {
-    title: "Urodinâmica",
+    title: "Implantes Hormonais",
     descricao:
-      "A urodinâmica é um conjunto de exames que avaliam o funcionamento do trato urinário inferior, incluindo a bexiga e a uretra. Esses exames ajudam a diagnosticar problemas relacionados ao armazenamento e esvaziamento da urina, como incontinência urinária, obstrução urinária e outras disfunções.",
+      "Os Implantes Hormonais são pequenos dispositivos inseridos sob a pele que liberam hormônios de forma controlada, sendo utilizados para tratar diversas condições, incluindo reposição hormonal em homens e mulheres.",
     imagem: ImageExample,
-    link: "/exames-tratamentos/urologia/urodinamica",
+    link: "/exames-tratamentos/tratamentos/implantes-hormonais",
   },
 ];
 
-  export { especialidades,populares };
+
+  export { exames,procedimentosPopulares };

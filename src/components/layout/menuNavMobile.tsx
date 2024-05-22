@@ -61,46 +61,105 @@ export default function MenuMobile() {
             <MenubarMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <MenubarTrigger>Exames e Tratamentos</MenubarTrigger>
+                  <MenubarTrigger>Exames</MenubarTrigger>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="flex gap-4 flex-col">
-                   <Link
-                                      onClick={() => setIsMenuOpen(!isMenuOpen)}
-
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/exames/citoscopia-rigida"}
+                  >
+                    <DropdownMenuItem>Cistoscopia Rigida</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/exames/citoscopia-flexivel"}
+                  >
+                    <DropdownMenuItem>Cistoscopia Flexível</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
                     href={
-                      "/exames-tratamentos/urologia/Ultrassonografia-Abdominal-e-Pelvica"
+                      "/exames-tratamentos/exames/teste-erecao-farmaco-induzida"
                     }
                   >
                     <DropdownMenuItem>
-                      Ultrassonografia Abdominal e Pélvica
+                      Teste de Ereção Fármaco-Induzida
                     </DropdownMenuItem>
                   </Link>
                   <Link
-                    href={"/exames-tratamentos/urologia/Urodinamica"}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/exames/urodinamica"}
                   >
                     <DropdownMenuItem>Urodinâmica</DropdownMenuItem>
                   </Link>
                   <Link
-                    href={"/exames-tratamentos/urologia/Urofluxometria"}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/exames/urodinamica-completa"}
                   >
-                    <DropdownMenuItem>Urofluxometria</DropdownMenuItem>
+                    <DropdownMenuItem>Urodinâmica Completa</DropdownMenuItem>
                   </Link>
-
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </MenubarMenu>
+            <MenubarMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <MenubarTrigger>Tratamentos</MenubarTrigger>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="flex gap-4 flex-col">
                   <Link
-                    href={"/exames-tratamentos/nefrologia/exame-de-urina"}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/tratamentos/biopsia-peniana"}
                   >
-                    <DropdownMenuItem>Exame de Urina (EAS) </DropdownMenuItem>
+                    <DropdownMenuItem>Biópsia Peniana</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/tratamentos/crioterapia"}
+                  >
+                    <DropdownMenuItem>Crioterapia</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/tratamentos/dilatacao-uretral"}
+                  >
+                    <DropdownMenuItem>Dilatação Uretral</DropdownMenuItem>
                   </Link>
                   <Link
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     href={
-                      "/exames-tratamentos/nefrologia/ultrassonografia-renal"
+                      "/exames-tratamentos/tratamentos/fisioterapia-pelvica"
                     }
                   >
-                    <DropdownMenuItem>Ultrassonografia Renal</DropdownMenuItem>
+                    <DropdownMenuItem>Fisioterapia Pélvica</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/tratamentos/implantes-hormonais"}
+                  >
+                    <DropdownMenuItem>Implantes Hormonais</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={
+                      "/exames-tratamentos/tratamentos/terapia-por-ondas-de-choque"
+                    }
+                  >
+                    <DropdownMenuItem>
+                      Terapia por Ondas de Choque
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/tratamentos/postectomia"}
+                  >
+                    <DropdownMenuItem>Postectomia</DropdownMenuItem>
+                  </Link>
+                  <Link
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    href={"/exames-tratamentos/tratamentos/vasectomia"}
+                  >
+                    <DropdownMenuItem>Vasectomia</DropdownMenuItem>
                   </Link>
                 </DropdownMenuContent>
               </DropdownMenu>

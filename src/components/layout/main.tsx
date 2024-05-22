@@ -4,19 +4,16 @@ import * as React from "react"
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+ 
 } from "@/components/ui/carousel"
 import Link from "next/link"
 import { Button } from "../ui/button"
 import Autoplay from "embla-carousel-autoplay"
 import Logo from "../../app/assets/Logo.jpg"
-import { populares } from "@/app/services"
+import {   procedimentosPopulares } from "@/app/services"
 import Image from "next/image"
 import  Tratamentos  from "./tratamentos"
- import tratamento1Image from '../../app/assets/Tratamento Cardiovascular Preventivo.webp'
- import tratamento2Image from '../../app/assets/tcc-03.webp'
- import tratamento3Image from '../../app/assets/ReabilitacaoFisica.jpeg'
+ 
 export function Main() {
   const plugin = React.useRef(
     Autoplay({ delay: 20000  })
@@ -127,12 +124,11 @@ export function Main() {
               Tratamentos Populares
             </h2>
             <p className=" text-xl font-bold  text-center   ">
-              Contamos com especialistas em Urologia, Nefrologia, Radiologia,
-              Fisioterapia, Ginecologia e Cirurgia Plástica
+              Contamos com especialistas em  Urologia, Nefrologia, Medicina da Dor, Acupuntura, Fisioterapia Pélvica.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full  ">
-            {populares.map((tratamento, index) => (
+            {procedimentosPopulares.map((tratamento, index) => (
               <Link href={tratamento.link} key={index}>
                 <div
                   key={index}

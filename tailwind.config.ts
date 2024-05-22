@@ -63,9 +63,9 @@ const config = {
       },
 
       backgroundImage: {
-         'banner': "url('./assets/Medicos.jpg')",
-         'banner2': "url('./assets/principal.jpg')",
-         'banner3': "url('./assets/banner2.png')",
+         'banner': "url('./assets/Funcionarios/Propietarios1[1].JPG')",
+         'banner2': "url('./assets/Funcionarios/Propietarios1[0].JPG')",
+          'banner3': "url('./assets/banner2.png')",
       
    
       },
