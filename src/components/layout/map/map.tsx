@@ -1,34 +1,36 @@
-'use client';
+'use client'
 import React, { useEffect, useState } from "react";
-import { GoogleMap, useJsApiLoader, MarkerF, StreetViewPanorama, Marker } from '@react-google-maps/api';
-import { Button } from "../../ui/button";
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { GoogleMap, useJsApiLoader,   StreetViewPanorama, Marker } from '@react-google-maps/api';
+ import { Mail, MapPin, MessageCircle } from "lucide-react";
 import ButtonConsulta from "../buttonConsulta";
 
 type WindowSize = {
-  width: number;
-  height: number;
+  width: number | undefined;
+  height: number | undefined;
 };
 
 export default function Map() {
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState<WindowSize>({
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: window.innerWidth || 0,
+      height: window.innerHeight || 0,
     });
+    
 
     useEffect(() => {
-      function handleResize() {
+      const handleResize = () => {
         setWindowSize({
           width: window.innerWidth,
           height: window.innerHeight,
         });
+      };
+
+      if (typeof window !== 'undefined') {
+        window.addEventListener("resize", handleResize);
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
       }
-
-      window.addEventListener("resize", handleResize);
-      handleResize();
-
-      return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return windowSize;
@@ -44,7 +46,7 @@ export default function Map() {
   const size = useWindowSize();
 
   const containerStyle = {
-    width: size.width <= 768 ? "400px" : "990px",
+    width: size.width !== undefined? size.width <= 768 ? "400px" : "990px" : 0,
     height: "400px",
   };
 
