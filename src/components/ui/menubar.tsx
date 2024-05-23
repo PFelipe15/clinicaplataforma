@@ -3,17 +3,14 @@
 import * as React from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
 import { Check, ChevronRight, Circle } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 
 const MenubarMenu = MenubarPrimitive.Menu
-
 const MenubarGroup = MenubarPrimitive.Group
-
 const MenubarPortal = MenubarPrimitive.Portal
-
 const MenubarSub = MenubarPrimitive.Sub
-
 const MenubarRadioGroup = MenubarPrimitive.RadioGroup
 
 const Menubar = React.forwardRef<
@@ -23,7 +20,7 @@ const Menubar = React.forwardRef<
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
-      "flex h-10 items-center    text-white  space-x-1 rounded-md  p-1",
+      "flex h-10 items-center text-white space-x-1 rounded-md p-1",
       className
     )}
     {...props}
@@ -33,17 +30,23 @@ Menubar.displayName = MenubarPrimitive.Root.displayName
 
 const MenubarTrigger = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>
->(({ className, ...props }, ref) => (
-  <MenubarPrimitive.Trigger
-    ref={ref}
-    className={cn(
-      "flex cursor-default text-base text-secondary font-bold select-none items-center px-3 py-1.5 outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-primary data-[state=open]:text-white   p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-70  duration-300  ",
-      className
-    )}
-    {...props}
-  />
-));
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger> & { href: string }
+>(({ className, href, ...props }, ref) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <MenubarPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "flex cursor-default text-base text-secondary font-bold select-none items-center px-3 py-1.5 outline-none p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-70 duration-300",
+        isActive ? "bg-primary text-white -translate-y-1" : "",
+        className
+      )}
+      {...props}
+    />
+  );
+});
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName
 
 const MenubarSubTrigger = React.forwardRef<
