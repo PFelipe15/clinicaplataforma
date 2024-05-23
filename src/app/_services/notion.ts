@@ -47,9 +47,6 @@ export async function getPost(slug: string){
     },
  
   });
-
-console.log(slug)
-
   const typedResponse =( response as  unknown) as NotionDatabaseResponse
   const pageId = response.results[0].id
   const n2m = new NotionToMarkdown({ notionClient: notion });

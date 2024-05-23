@@ -2,7 +2,9 @@
  import { getPost } from '@/app/_services/notion';
  import ReactMarkdown from 'react-markdown';
  export default async function BlogPost({params}:{params:{slug:string}}) {
-  const post = await getPost(params.slug);
+  const decodedSlug = decodeURIComponent(params.slug);
+ ;
+  const post = await getPost(decodedSlug);
 
   return (
     <div className="container min-h-[100vh] mx-auto p-6">
