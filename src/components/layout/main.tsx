@@ -10,7 +10,7 @@ import Link from "next/link"
 import { Button } from "../ui/button"
 import Autoplay from "embla-carousel-autoplay"
 import Logo from "../../app/assets/Logo.jpg"
-import {   procedimentosPopulares } from "@/app/services"
+import {   procedimentosPopulares } from "@/app/_services/services"
 import Image from "next/image"
 import  Tratamentos  from "./tratamentos"
  

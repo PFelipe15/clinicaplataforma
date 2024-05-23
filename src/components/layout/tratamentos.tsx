@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../ui/carousel";
-import { exames } from "@/app/services";
+import { exames } from "@/app/_services/services";
 
 export default function Tratamentos() {
   interface Exame {

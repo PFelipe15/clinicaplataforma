@@ -104,7 +104,11 @@ export default function MenuNav() {
           </MenubarContent>
         </MenubarMenu>
         <MenubarMenu>
+        <Link href="/blog">
           <MenubarTrigger href="/blog">Blog</MenubarTrigger>
+
+        </Link>
+
         </MenubarMenu>
       </Menubar>
     );

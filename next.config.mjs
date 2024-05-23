@@ -7,6 +7,9 @@ const nextConfig = {
              hostname: 'via.placeholder.com',
        
           },
+          {
+            hostname:"prod-files-secure.s3.us-west-2.amazonaws.com"
+          }
         ],
       },
 

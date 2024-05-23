@@ -34,7 +34,7 @@ export default function MenuMobile() {
           <Menubar className="flex font-bold text-white flex-col gap-4 items-center ">
             <MenubarMenu>
               <Link href={"/"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <MenubarTrigger href={"/"} >Home</MenubarTrigger>
+                <MenubarTrigger href={"/"}>Home</MenubarTrigger>
               </Link>
             </MenubarMenu>
             <MenubarMenu>
@@ -42,7 +42,7 @@ export default function MenuMobile() {
                 href={"/about-me"}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                <MenubarTrigger   href={"/about-me"}>Quem Somos</MenubarTrigger>
+                <MenubarTrigger href={"/about-me"}>Quem Somos</MenubarTrigger>
               </Link>{" "}
             </MenubarMenu>
             <MenubarMenu>
@@ -55,13 +55,15 @@ export default function MenuMobile() {
                 href={"/clinica"}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                <MenubarTrigger  href={"/clinica"}>A Clinica</MenubarTrigger>
+                <MenubarTrigger href={"/clinica"}>A Clinica</MenubarTrigger>
               </Link>{" "}
             </MenubarMenu>
             <MenubarMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <MenubarTrigger href='/exames-tratamentos/exames' >Exames</MenubarTrigger>
+                  <MenubarTrigger href="/exames-tratamentos/exames">
+                    Exames
+                  </MenubarTrigger>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="flex gap-4 flex-col">
                   <Link
@@ -104,7 +106,9 @@ export default function MenuMobile() {
             <MenubarMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <MenubarTrigger href='/exames-tratamentos/tratamento'>Tratamentos</MenubarTrigger>
+                  <MenubarTrigger href="/exames-tratamentos/tratamento">
+                    Tratamentos
+                  </MenubarTrigger>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="flex gap-4 flex-col">
                   <Link
@@ -165,7 +169,9 @@ export default function MenuMobile() {
               </DropdownMenu>
             </MenubarMenu>
             <MenubarMenu>
-              <MenubarTrigger href='/blog'>Blog</MenubarTrigger>
+              <Link href={"/blog"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <MenubarTrigger href="/blog">Blog</MenubarTrigger>
+              </Link>
             </MenubarMenu>
           </Menubar>
         </div>

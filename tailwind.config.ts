@@ -4,13 +4,12 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
-
 
   theme: {
     container: {
@@ -63,11 +62,9 @@ const config = {
       },
 
       backgroundImage: {
-         'banner': "url('./assets/Funcionarios/Propietarios1[2].JPG')",
-         'banner2': "url('./assets/Funcionarios/Propietarios1[3].JPG')",
-          'banner3': "url('./assets/banner2.png')",
-      
-   
+        banner: "url('./assets/Funcionarios/Propietarios1[2].JPG')",
+        banner2: "url('./assets/Funcionarios/Propietarios1[3].JPG')",
+        banner3: "url('./assets/banner2.png')",
       },
       keyframes: {
         "accordion-down": {
@@ -80,24 +77,20 @@ const config = {
         },
 
         typing: {
-          from: { width: '0' },
-          to: { width: '100%' },
+          from: { width: "0" },
+          to: { width: "100%" },
         },
         blink: {
-          '0%, 100%': { borderColor: 'transparent' },
-          '50%': { borderColor: 'black' },
+          "0%, 100%": { borderColor: "transparent" },
+          "50%": { borderColor: "black" },
         },
-       
       },
-
-     
 
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "typing": 'typing 3.5s steps(40, end) forwards',
-        "blink": 'blink 0.75s step-end infinite',
- 
+        typing: "typing 3.5s steps(40, end) forwards",
+        blink: "blink 0.75s step-end infinite",
       },
 
       fontFamily: {
@@ -105,7 +98,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
 
 export default config
