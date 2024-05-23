@@ -31,6 +31,7 @@ export async function getPosts(){
 }
 
 export async function getPost(slug: string){
+  noStore();
    const response = await notion.databases.query({
     database_id: DATABASE_ID,
     filter: {
@@ -46,6 +47,8 @@ export async function getPost(slug: string){
     },
  
   });
+
+console.log(slug)
 
   const typedResponse =( response as  unknown) as NotionDatabaseResponse
   const pageId = response.results[0].id

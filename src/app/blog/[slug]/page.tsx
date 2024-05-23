@@ -9,8 +9,8 @@
       <h1 className="text-4xl font-bold text-center mb-8 text-primary">
         {post.title}{" "}
       </h1>
-      <div className='prose lg:prose-em'>
-      <ReactMarkdown>{post.content}</ReactMarkdown>
+      <div className='prose prose-xl prose-h1:text-4xl prose-h1:text-green prose:text-dark prose-p:text-base prose-strong:text-blue prose-ul:list-decimal prose-ul:text-dark'>
+      <ReactMarkdown className='flex flex-col w-full'>{post.content}</ReactMarkdown>
       </div>
     </div>
   );
