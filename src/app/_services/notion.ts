@@ -1,4 +1,4 @@
-'use server'
+
 import { Client } from '@notionhq/client'
 import { NotionDatabaseResponse } from '../_types/notion';
 import { NotionToMarkdown } from 'notion-to-md';
@@ -9,13 +9,13 @@ const DATABASE_ID = process.env.DATABASE_ID!;
 export async function getPosts(){
     const response = await notion.databases.query({
       database_id: DATABASE_ID,
-    
- 
     });
 
-     const typedResponse =( response as  unknown) as NotionDatabaseResponse
-
-    return typedResponse.results.map((post) => ({
+     const typedResponse = ( response as  unknown) as NotionDatabaseResponse
+ 
+    
+ 
+     return typedResponse.results.map((post) => ({
       id: post.id,
       title: post.properties.titulo.title[0].plain_text,
       slug: post.properties.slug.rich_text[0].plain_text,
@@ -24,6 +24,8 @@ export async function getPosts(){
       imageCapa:post.properties.imageCapa.files[0].file.url,
       createAt:post.created_time.toString
      }));
+
+
 }
 
 export async function getPost(slug: string){
@@ -44,8 +46,6 @@ export async function getPost(slug: string){
   });
 
   const typedResponse =( response as  unknown) as NotionDatabaseResponse
-
-
   const pageId = response.results[0].id
   const n2m = new NotionToMarkdown({ notionClient: notion });
 
