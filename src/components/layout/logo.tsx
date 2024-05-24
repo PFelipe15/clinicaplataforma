@@ -16,7 +16,7 @@ const Logo = () => {
       width={90}
       height={90}
       alt='Logo'
-      className='rounded-lg'
+      className='rounded-lg h-[80px] w-[80px]' 
       />
        <span className="text-primary text-2xl hidden md:flex ">UroVida</span>
     </Link>

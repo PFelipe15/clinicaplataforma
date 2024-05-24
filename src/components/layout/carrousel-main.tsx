@@ -19,7 +19,7 @@ export default function CarrouselBannerMain() {
       )
 
     const Card1 = () => (
-        <section className="bg-cover bg-center bg-no-repeat bg-banner flex flex-col items-center justify-center h-screen md:h-[100vh] w-full transition-all text-white">
+        <section className="bg-cover  bg-center bg-no-repeat bg-banner flex flex-col items-center justify-center h-screen md:h-[100vh] w-full transition-all text-white">
           <div className="flex flex-col gap-4 text-black font-extrabold rounded-lg">
             <div className="flex flex-col gap-4 items-center md:items-baseline">
               <div className="flex items-center justify-center md:flex-row md:gap-4">
@@ -37,9 +37,9 @@ export default function CarrouselBannerMain() {
                   </h1> */}
                 </div>
               </div>
-              <div className="flex gap-4 flex-col">
+              <div className="flex gap-4 jus flex-col">
 
-              <h1 className="text-4xl md:text-5xl text-white max-w-[95vw] md:max-w-[1200px] p-4 animate-typing bg-primary rounded-md transition-all">
+              <h1 className="text-2xl md:text-5xl text-white max-w-[95vw] md:max-w-[1200px] p-4 animate-typing bg-primary rounded-md transition-all">
                 O cuidado que transforma vidas, encontrando conforto e cura em cada
                 consulta.
               </h1>
@@ -73,7 +73,7 @@ export default function CarrouselBannerMain() {
                   </h1>
                 </div> */}
               </div>
-              <h1 className="text-4xl md:text-5xl text-white max-w-[95vw] md:max-w-[1200px] p-4 animate-typing bg-primary rounded-md transition-all">
+              <h1 className="text-2xl md:text-5xl text-white max-w-[95vw] md:max-w-[1200px] p-4 animate-typing bg-primary rounded-md transition-all">
                 Somos uma clínica capacitada com diversas especialidades,
                 oferecendo cuidado especializado e excelência em cada consulta.
               </h1>

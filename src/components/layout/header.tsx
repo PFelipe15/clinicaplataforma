@@ -5,13 +5,15 @@ import MenuMobile from "./menuNavMobile";
 
 export function Header() {
   return (
-    <div className="container  bg-white flex justify-between items-center py-5 sticky md:flex-col gap-4 lg:flex-row top-0 z-10 shadow">
+    <div className="container  bg-white flex items-center justify-between gap-4 sticky md:flex-col lg:flex-row top-0 z-10 shadow">
       <Logo />
-       <div className="hidden md:block">
+      <div className="hidden md:block">
         <MenuNav />
       </div>
-      <ButtonConsulta/>
-        <div className="md:hidden">
+      <div className="mr-5 md:mr-0">
+        <ButtonConsulta />
+      </div>
+      <div className="md:hidden">
         <MenuMobile />
       </div>
     </div>
