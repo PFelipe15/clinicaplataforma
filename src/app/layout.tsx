@@ -6,6 +6,7 @@ import { Raleway } from 'next/font/google'
 import Map from "@/components/layout/map/map";
 import Footer from "@/components/layout/footer";
 import BackButton from "@/components/layout/backButton";
+import { NavigationUrls } from "@/components/layout/navigationurls";
 
 export const metadata: Metadata = {
   title: "Urovida",
@@ -29,7 +30,6 @@ export default function RootLayout({
         <Header />
         <main className="flex flex-col container items-center  animate-fadeIn ">
           {children}
-
           <BackButton />
         </main>
 

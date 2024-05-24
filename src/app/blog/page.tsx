@@ -5,8 +5,7 @@ import Link from 'next/link';
 
 export default async function BlogHome() {
   const postsNotion = await getPosts();
-  console.log(postsNotion[0]);
-   return (
+    return (
      <div className="container mx-auto p-6">
        <h1 className="text-4xl font-bold text-center mb-8 text-primary">
          Nosso Blog
