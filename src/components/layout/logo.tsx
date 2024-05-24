@@ -13,10 +13,10 @@ const Logo = () => {
 
       <Image
       src={logo}
-      width={60}
-      height={60}
+      width={90}
+      height={90}
       alt='Logo'
-      className='rounded-md'
+      className='rounded-lg'
       />
        <span className="text-primary text-2xl hidden md:flex ">UroVida</span>
     </Link>
