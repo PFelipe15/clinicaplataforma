@@ -1,13 +1,17 @@
-import { unstable_noStore as noStore } from 'next/cache';
 import { Client } from '@notionhq/client'
 import { NotionDatabaseResponse } from '../_types/notion';
 import { NotionToMarkdown } from 'notion-to-md';
 import ImageNotFound from '../assets/Funcionarios/icon-image-not-found-free-vector.jpg'
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const DATABASE_ID = process.env.DATABASE_ID!;
+
+import { unstable_noStore as noStore } from 'next/cache';
  
+
+
+
 export async function getPosts(){
-  noStore();
+  noStore() 
 
     const response = await notion.databases.query({
       database_id: DATABASE_ID,
@@ -54,7 +58,6 @@ export async function getMainPosts(){
 
 
 }
-
 export async function getPost(slug: string){
   noStore();
    const response = await notion.databases.query({

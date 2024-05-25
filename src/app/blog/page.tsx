@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React    from 'react';
 import { getPosts } from '../_services/notion';
 import Link from 'next/link';
+import VideoEmbed from '@/components/layout/IframeVideo';
 
 export default async function BlogHome() {
   const postsNotion = await getPosts();
@@ -62,6 +63,8 @@ export default async function BlogHome() {
            </div>
          ))}
        </div>
+
+ 
      </div>
    );
 }
