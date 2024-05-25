@@ -51,9 +51,10 @@ export default function Map() {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY!,
+    googleMapsApiKey: process.env.API_KEY!,
   });
 
+ 
   const options = {
     mapTypeControl: false,
     zoomControl: false,
@@ -63,11 +64,11 @@ export default function Map() {
   };
 
   const handleEmailMouseOver = () => {
-    window.open('mailto:secretaria@giulianoaita.com.br');
+    window.open('mailto:urovida@gmail.com');
   };
 
   const handlePhoneMouseOver = () => {
-    window.open('https://api.whatsapp.com/send?phone=558694912878&text=Ol%C3%A1,%20quero%20uma%20consulta');
+    window.open('https://api.whatsapp.com/send?phone=55869993372498&text=Ol%C3%A1,%20quero%20uma%20consulta');
   };
 
   return isLoaded ? (
