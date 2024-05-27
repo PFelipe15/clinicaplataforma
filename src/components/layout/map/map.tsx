@@ -54,8 +54,7 @@ export default function Map() {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY!,
   });
 
-  console.log(useJsApiLoader)
- 
+  
   const options = {
     mapTypeControl: false,
     zoomControl: false,
