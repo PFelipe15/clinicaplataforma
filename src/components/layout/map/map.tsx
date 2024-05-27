@@ -51,9 +51,10 @@ export default function Map() {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.API_KEY!,
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY!,
   });
 
+  console.log(useJsApiLoader)
  
   const options = {
     mapTypeControl: false,
