@@ -9,7 +9,7 @@ import BlogMain from "./blogMain"
 import CarrouselBannerMain from "./carrousel-main"
  
 export function Main() { 
-    return (
+     return (
       <div className="flex flex-col justify-center items-center   ">
        <CarrouselBannerMain/>
 
