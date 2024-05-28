@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Dono1 from '../assets/Funcionarios/Propietario1[0].jpg';
-import Dono2 from '../assets/Funcionarios/Propietario2[1].jpg';
+import Dono1 from '../assets/Funcionarios/Propietario2[1].jpg';
+import Dono2 from '../assets/Funcionarios/Propietario1[0].jpg';
  
 import TodosOsDonos from '../assets/Medicos2.jpg';
 
