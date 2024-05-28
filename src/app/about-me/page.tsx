@@ -1,30 +1,31 @@
 import Image from 'next/image';
-import Dono1 from '../assets/principal.jpg';
-import Dono2 from '../assets/Medicos.jpg';
-import Dono3 from '../assets/Medicos2.jpg';
+import Dono1 from '../assets/funcionarios/Propietario1[0].jpg';
+import Dono2 from '../assets/funcionarios/Propietario2[1].jpg';
+ 
 import TodosOsDonos from '../assets/Medicos2.jpg';
 
 export default function QuemSomos() {
     const owners = [
         {
-            name: 'Dr. João Silva',
-            title: 'Psiquiatra',
-            image: Dono1,
-            description: 'Dr. João é um renomado psiquiatra com mais de 20 anos de experiência. Ele acredita que a saúde mental é a chave para uma vida equilibrada e feliz.'
-        },
-        {
-            name: 'Dra. Maria Souza',
-            title: 'Fisioterapeuta',
+            name: 'Dr. Benjamim Carvalho',
+            title: 'Urologista',
             image: Dono2,
-            description: 'Dra. Maria é uma fisioterapeuta dedicada, focada na reabilitação e bem-estar dos seus pacientes. Ela vê a fisioterapia como uma arte de restaurar movimentos e melhorar a qualidade de vida.'
+            description: 'Dr. Benjamim é um renomado urologista com mais de 20 anos de experiência. Ele acredita que a saúde do trato urinário é fundamental para o bem-estar geral e se dedica a fornecer o melhor cuidado aos seus pacientes.'
         },
         {
-            name: 'Dr. Carlos Pereira',
-            title: 'Cardiologista',
-            image: Dono3,
-            description: 'Dr. Carlos é um cardiologista apaixonado por promover a saúde cardiovascular. Ele acredita que uma abordagem preventiva é essencial para uma vida longa e saudável.'
+            name: 'Dr Luciano Couto',
+            title: 'Urologista',
+            image: Dono1,
+            description: 'Dr. Luciano é um urologista dedicado, especializado em tratar e prevenir doenças do sistema urinário. Ele vê a urologia como uma chave para melhorar a qualidade de vida de seus pacientes.'
+        },
+        {
+            name: 'Dr Vilson Bezerra',
+            title: 'Urologista',
+            image: Dono1,
+            description: 'Dr. Vilson é um urologista apaixonado por promover a saúde do sistema urinário. Ele acredita que uma abordagem preventiva e educacional é essencial para uma vida longa e saudável.'
         },
     ];
+    
 
     return (
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8 animate-fadeIn">
@@ -33,7 +34,7 @@ export default function QuemSomos() {
                 {owners.map((owner, index) => (
                     <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                         <div className="relative h-56 w-full">
-                            <Image src={owner.image} alt={owner.name} layout="fill" objectFit="cover" className="rounded-t-lg" />
+                            <Image src={owner.image} alt={owner.name} layout="fill" objectFit="contain" className="rounded-t-lg " />
                         </div>
                         <div className="p-6">
                             <h2 className="text-2xl font-bold mb-2 text-gray-800">{owner.name}</h2>

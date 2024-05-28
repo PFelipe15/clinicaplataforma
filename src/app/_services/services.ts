@@ -1,4 +1,4 @@
-import ImageExample from "../assets/347421952_1446950042802881_739511864334827390_n.jpg";
+import ImageExample from "../assets/LogoQualidadeAlta.jpg";
 
 const exames = [
   {

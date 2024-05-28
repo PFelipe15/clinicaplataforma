@@ -49,6 +49,7 @@ export default function Map() {
     height: "400px",
   };
 
+ 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY!,
