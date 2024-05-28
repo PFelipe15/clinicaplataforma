@@ -4,6 +4,7 @@ import Dono2 from '../assets/Funcionarios/Propietario2[1].jpg';
  
 import TodosOsDonos from '../assets/Medicos2.jpg';
 
+
 export default function QuemSomos() {
     const owners = [
         {
