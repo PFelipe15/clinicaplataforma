@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import Image1 from '../assets/Funcionarios/Propietario2.jpg';
+import Image1 from '../assets/Funcionarios/Propietario2[1].jpg';
 import Image2 from '../assets/Medicos2.jpg';
 import Image, { StaticImageData } from 'next/image';
 import { Maximize2, X } from 'lucide-react';
