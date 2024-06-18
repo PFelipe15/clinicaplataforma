@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, StreetViewPanorama, Marker } from '@react-google-maps/api';
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import ButtonConsulta from "../buttonConsulta";
+import WhatsAppChat from "./whatsAppChat"; // Import the new WhatsAppChat component
 
 type WindowSize = {
   width: number | undefined;
@@ -10,6 +11,8 @@ type WindowSize = {
 };
 
 export default function Map() {
+  const [showChat, setShowChat] = useState(false); // State to control the visibility of the chat component
+
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState<WindowSize>({
       width: typeof window !== 'undefined' ? window.innerWidth || 0 : undefined,
@@ -34,16 +37,11 @@ export default function Map() {
 
     return windowSize;
   }
-  
 
   const [center, setCenter] = useState({
     lat: -5.078418091095698,
     lng: -42.785124571450204,
   });
- 
-    
-  const [pinVisible, setPinVisible] = useState(false);
-  const [viewVisible, setViewVisible] = useState(false);
 
   const size = useWindowSize();
 
@@ -57,7 +55,6 @@ export default function Map() {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY!,
   });
 
-  
   const options = {
     mapTypeControl: true,
     zoomControl: true,
@@ -71,7 +68,7 @@ export default function Map() {
   };
 
   const handlePhoneMouseOver = () => {
-    window.open('https://api.whatsapp.com/send?phone=55869993372498&text=Ol%C3%A1,%20quero%20uma%20consulta');
+    setShowChat(true); // Show the chat component when mouse over the phone icon
   };
 
   return isLoaded ? (
@@ -87,9 +84,8 @@ export default function Map() {
             <Marker
               position={center}
               visible={true}
-               
               onClick={() => {
-                setViewVisible(true);
+                setShowChat(true); // Show the chat component when clicking the marker
               }}
             />
 
@@ -136,12 +132,13 @@ export default function Map() {
         </div>
         <div
           className="flex gap-2 items-center hover:scale-105 transition-all"
-          onClick={handlePhoneMouseOver}
+          onMouseOver={handlePhoneMouseOver}
         >
           <MessageCircle size="32" className="text-primary" />
           <p>(86) 999337249</p>
         </div>
       </div>
+      {showChat && <WhatsAppChat onClose={() => setShowChat(false)} />} {/* Render the chat component */}
     </div>
   ) : (
     <div>Carregando...</div>
