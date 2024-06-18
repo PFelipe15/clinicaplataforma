@@ -35,11 +35,12 @@ export function Main() {
       {/* Seção de Teleagendas */}
       <div className="flex bg-telecomunicacoes bg-cover bg-center text-black min-h-[560px] flex-col py-10 my-10 rounded-md items-center w-full justify-center transform transition-transform duration-500">
         <div className="mb-8 text-center bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-4xl font-bold">Teleagendas</h2>
+          <h2 className="text-4xl font-bold">Teleagendas 🛜</h2>
           <p className="text-xl font-semibold mt-2">
             A UROVIDA também oferece serviços de teleagendas para maior
             comodidade e melhor comunicação.
           </p>
+
         </div>
         <p className="text-lg px-4 mb-4 bg-primary text-white p-4 rounded-lg shadow-md">
           Agende suas consultas online com nossos especialistas de forma rápida
