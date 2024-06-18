@@ -4,7 +4,7 @@ import { MessageCircle, X } from "lucide-react";
 import Image from 'next/image';
 import LogoImage from '../../../app/assets/LogoQualidadeAlta.jpg'
 
-const WhatsAppChat = ({ onClose }) => {
+const WhatsAppChat = ({ onClose }:any) => {
   return (
     <div className="fixed bottom-4 right-4 bg-white shadow-lg p-4 rounded-lg w-80 animate-slideUp">
       <div className="flex justify-between items-center bg-green-500 text-white p-2 rounded-t-lg">
