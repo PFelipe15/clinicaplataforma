@@ -34,11 +34,14 @@ export default function Map() {
 
     return windowSize;
   }
+  
 
   const [center, setCenter] = useState({
-    lat: -5.092670743603099,
-    lng: -42.815464261410334,
+    lat: -5.078418091095698,
+    lng: -42.785124571450204,
   });
+ 
+    
   const [pinVisible, setPinVisible] = useState(false);
   const [viewVisible, setViewVisible] = useState(false);
 
@@ -49,7 +52,6 @@ export default function Map() {
     height: "400px",
   };
 
- 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY!,
@@ -57,8 +59,8 @@ export default function Map() {
 
   
   const options = {
-    mapTypeControl: false,
-    zoomControl: false,
+    mapTypeControl: true,
+    zoomControl: true,
     fullscreenControl: false,
     clickableIcons: true,
     scrollwheel: true,
@@ -80,19 +82,12 @@ export default function Map() {
             options={options}
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={15}
+            zoom={17}
           >
             <Marker
               position={center}
-              visible={pinVisible}
-              icon={{
-                path: google.maps.SymbolPath.CIRCLE,
-                fillColor: "#1976D2",
-                fillOpacity: 1,
-                strokeColor: "#FFFFFF",
-                strokeWeight: 2,
-                scale: 8,
-              }}
+              visible={true}
+               
               onClick={() => {
                 setViewVisible(true);
               }}
@@ -101,7 +96,7 @@ export default function Map() {
             <StreetViewPanorama
               options={{
                 position: center,
-                visible: viewVisible,
+                visible: true,
               }}
             />
           </GoogleMap>

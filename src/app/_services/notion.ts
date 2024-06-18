@@ -7,15 +7,14 @@ const DATABASE_ID = process.env.DATABASE_ID!;
 
 import { unstable_noStore as noStore } from 'next/cache';
  
-
-
-
 export async function getPosts(){
   noStore() 
 
     const response = await notion.databases.query({
       database_id: DATABASE_ID,
     });
+
+  
 
      const typedResponse = ( response as  unknown) as NotionDatabaseResponse
 

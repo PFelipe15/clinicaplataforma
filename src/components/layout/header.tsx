@@ -5,7 +5,7 @@ import MenuMobile from "./menuNavMobile";
 
 export function Header() {
   return (
-    <div className="container  bg-white flex items-center justify-between gap-4 sticky md:flex-col lg:flex-row top-0 z-10 shadow">
+    <div className="container bg-white flex items-center justify-between gap-4 sticky md:flex-col lg:flex-row top-0 z-10 shadow">
       <Logo />
       <div className="hidden md:block">
         <MenuNav />
