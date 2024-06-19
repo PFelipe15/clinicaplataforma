@@ -32,12 +32,12 @@ export function Main() {
         </Link>
       </div>
 
-      {/* Seção de Teleagendas */}
+      {/* Seção de Teleconsultas */}
       <div className="flex bg-telecomunicacoes bg-cover bg-center text-black min-h-[560px] flex-col py-10 my-10 rounded-md items-center w-full justify-center transform transition-transform duration-500">
         <div className="mb-8 text-center bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-4xl font-bold">Teleagendas 🛜</h2>
+          <h2 className="text-4xl font-bold">Tele-consultas 🛜</h2>
           <p className="text-xl font-semibold mt-2">
-            A UROVIDA também oferece serviços de teleagendas para maior
+            A UROVIDA também oferece serviços de teleconsultas para maior
             comodidade e melhor comunicação.
           </p>
 
