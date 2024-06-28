@@ -135,7 +135,7 @@ export default function Map() {
           onMouseOver={handlePhoneMouseOver}
         >
           <MessageCircle size="32" className="text-primary" />
-          <p>(86) 999337249</p>
+          <p>(86) 9993372499</p>
         </div>
       </div>
       {showChat && <WhatsAppChat onClose={() => setShowChat(false)} />} {/* Render the chat component */}

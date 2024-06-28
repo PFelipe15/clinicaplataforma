@@ -29,7 +29,9 @@ const WhatsAppChat = ({ onClose }:any) => {
           </div>
         </div>
         <button
-          onClick={() => window.open('https://api.whatsapp.com/send?phone=55869993372498&text=Ol%C3%A1,%20quero%20uma%20consulta')}
+        
+
+          onClick={() => window.open('https://api.whatsapp.com/send?phone=5586999337249&text=Ol%C3%A1,%20quero%20uma%20consulta')}
           className="bg-green-500 text-white font-semibold py-2 px-4 rounded-full w-full hover:bg-green-600 transition-colors duration-300"
         >
           Sim, falar agora!

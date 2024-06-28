@@ -8,6 +8,7 @@ import BlogMain from "./blogMain";
 import CarrouselBannerMain from "./carrousel-main";
 import telecomunicacao from '../../app/assets/telecomunicacoes.jpg';
 import ButtonConsulta from "./buttonConsulta";
+import Comments from "./comments";
 
 export function Main() {
   return (
@@ -18,8 +19,11 @@ export function Main() {
         <Tratamentos />
       </div>
 
+<div className="flex  items-center justify-between container ">
+
       <div className="max-w-[100vw] h-[400px] w-[720px] relative flex-col bg-banner2 bg-cover flex items-center justify-center">
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm">
+        </div>
         <h1 className="relative m-4 font-bold p-2 rounded-md text-center text-secondary text-3xl">
           Para nós da <span className="text-black">UROVIDA</span>, a sua vida é
           nossa principal preocupação. Estamos com você em todos os aspectos,
@@ -30,7 +34,11 @@ export function Main() {
             Ver mais
           </Button>
         </Link>
-      </div>
+       </div>
+       <div>
+      <Comments/>
+       </div>
+</div>
 
       {/* Seção de Teleconsultas */}
       <div className="flex bg-telecomunicacoes bg-cover bg-center text-black min-h-[560px] flex-col py-10 my-10 rounded-md items-center w-full justify-center transform transition-transform duration-500">
