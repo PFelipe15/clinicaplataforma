@@ -15,7 +15,7 @@ export function Main() {
     <div className="flex flex-col justify-center items-center">
       <CarrouselBannerMain />
 
-      <div className="flex bg-secondary my-10 p-4 items-center flex-coll w-full justify-center">
+      <div className="flex bg-secondary my-10 p-10 items-center     justify-center">
         <Tratamentos />
       </div>
 

@@ -12,6 +12,10 @@ const nextConfig = {
           },
           {
             hostname:"lh3.googleusercontent.com"
+          },
+        
+          {
+            hostname:"maps.googleapis.com"
           }
         ],
       },

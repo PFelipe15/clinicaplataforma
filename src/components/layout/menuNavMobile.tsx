@@ -90,9 +90,9 @@ export default function MenuMobile() {
                   </Link>
                   <Link
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    href={"/exames-tratamentos/exames/urodinamica"}
+                    href={"/exames-tratamentos/exames/urofluxometria"}
                   >
-                    <DropdownMenuItem>Urodinâmica</DropdownMenuItem>
+                    <DropdownMenuItem>urofluxometria</DropdownMenuItem>
                   </Link>
                   <Link
                     onClick={() => setIsMenuOpen(!isMenuOpen)}

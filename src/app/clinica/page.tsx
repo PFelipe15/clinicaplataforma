@@ -1,15 +1,48 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image1 from '../assets/Funcionarios/Propietario2[1].jpg';
 import Image2 from '../assets/Medicos2.jpg';
 import Image, { StaticImageData } from 'next/image';
 import { Maximize2, X } from 'lucide-react';
+import { fetchGooglePlacePhotosDetails } from '../api/reviews';
+
+interface Photo {
+  height: number;
+  html_attributions: string[];
+  photo_reference: string;
+  width: number;
+}
+
+interface PlaceDetails {
+  name: string;
+  photos: Photo[];
+}
 
 const Clinica = () => {
+
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [fullScreenImage, setFullScreenImage] = useState<StaticImageData | null>(null);
+  const [clinicPhotos, setClinicPhotos] = useState<{ src: string; width: number; height: number; }[]>([]);
 
-  const imagens: StaticImageData[] = [Image1, Image1, Image2];
+  useEffect(() => {
+    const getPhotosDetails = async () => {
+      try {
+        const imagesData:PlaceDetails = await fetchGooglePlacePhotosDetails();
+         const photoUrls = imagesData.photos.map((photo) => {
+           return {
+            src: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${photo.width}&photoreference=${photo.photo_reference}&key=${process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY}`,
+            width: photo.width,
+            height: photo.height,
+          };
+        });
+        setClinicPhotos(photoUrls);
+      } catch (error) {
+        console.error('Erro ao buscar fotos da clínica:', error);
+      }
+    };
+
+    getPhotosDetails();
+  }, []);
 
   return (
     <div className="container flex flex-col p-8">
@@ -76,39 +109,36 @@ const Clinica = () => {
 
       <div className="mt-8">
         <h1 className="text-3xl text-primary font-semibold mb-8">Galeria</h1>
-        <div className="mt-8 grid grid-cols-1 animate-fadeIn sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {imagens.map((image, index) => (
-            <div key={index} className="transition-all rounded-lg relative hover:border-primary border-2 hover:scale-95">
+        <div  className="mt-8 grid grid-cols-1 animate-fadeIn sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {clinicPhotos.map((photo, index) => (
+            <div key={index}  onClick={() => {
+              setIsFullScreen(true);
+              setFullScreenImage(photo);
+            }} className="transition-all rounded-lg relative hover:border-primary border-2 hover:scale-95">
               <Image
-                src={image}
-                className="animate-fadeIn"
+                src={photo.src}
                 alt="Clínica"
-                width={700}
-                height={800}
+                width={photo.width} // Define o tamanho baseado nos dados recebidos
+                height={photo.height} // Define o tamanho baseado nos dados recebidos
+                className="animate-fadeIn object-cover h-[600px]
+                "
               />
-              <Maximize2
-                size={25}
-                onClick={() => {
-                  setIsFullScreen(true);
-                  setFullScreenImage(image);
-                }}
-                className="absolute transition-all hover:scale-150 text-primary m-4 right-0 top-0"
-              />
+             
             </div>
           ))}
         </div>
       </div>
 
       {isFullScreen && fullScreenImage && (
-        <div className="fixed inset-0 bg-opacity-50 z-50 flex justify-center items-center max-w-[100vw]">
-          <div className="flex flex-col items-center bg-white p-4 rounded-lg shadow-lg">
+        <div className="fixed inset-0 bg-opacity-50 z-50 flex justify-center items-center max-w-screen max-h-screen">
+          <div className="flex flex-col items-center bg-white p-4 rounded-lg shadow-lg  max-w-lg">
             <div className="flex">
               <Image
-                src={fullScreenImage}
+                src={fullScreenImage.src}
                 alt="Clínica"
-                width={700}
-                height={720}
-                className="rounded-lg"
+                width={fullScreenImage.width}
+                height={fullScreenImage.height}
+                className="rounded-lg object-contain max-h-[500px]"
               />
               <X
                 size={25}

@@ -4,6 +4,9 @@ import { GoogleMap, useJsApiLoader, StreetViewPanorama, Marker } from '@react-go
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import ButtonConsulta from "../buttonConsulta";
 import WhatsAppChat from "./whatsAppChat"; // Import the new WhatsAppChat component
+import { CgInstagram } from "react-icons/cg";
+import { BsMailbox, BsWhatsapp } from "react-icons/bs";
+import { MdMarkEmailRead, MdMarkEmailUnread } from "react-icons/md";
 
 type WindowSize = {
   width: number | undefined;
@@ -39,15 +42,15 @@ export default function Map() {
   }
 
   const [center, setCenter] = useState({
-    lat: -5.078418091095698,
-    lng: -42.785124571450204,
+    lat:  -5.07848254265384, 
+    lng: -42.78508261184313,
   });
-
+ 
   const size = useWindowSize();
 
   const containerStyle = {
-    width: size.width !== undefined ? (size.width <= 768 ? "400px" : "990px") : 0,
-    height: "400px",
+    width: size.width !== undefined ? (size.width <= 768 ? "400px" : "800px") : 0,
+    height: "300px",
   };
 
   const { isLoaded } = useJsApiLoader({
@@ -70,10 +73,13 @@ export default function Map() {
   const handlePhoneMouseOver = () => {
     setShowChat(true); // Show the chat component when mouse over the phone icon
   };
+  const handleInstagramMouseOver = () => {
+    window.open("https://www.instagram.com/urovida/") // Show the chat component when mouse over the phone icon
+  };
 
   return isLoaded ? (
     <div className="container flex flex-col shadow-md p-2 my-8">
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-center   gap-4">
         <div className="rounded-lg flex-col">
           <GoogleMap
             options={options}
@@ -89,12 +95,7 @@ export default function Map() {
               }}
             />
 
-            <StreetViewPanorama
-              options={{
-                position: center,
-                visible: true,
-              }}
-            />
+            
           </GoogleMap>
         </div>
         <div className="flex flex-col mt-4 justify-center gap-2 md:mr-8 font-bold text-primary">
@@ -108,16 +109,9 @@ export default function Map() {
             </div>
             <div className="flex items-center">
               <MapPin size="32" className="text-primary" />
-              <p>Bairro Jóquei, Terezina.</p>
-            </div>
-            <div className="flex items-center">
-              <MapPin size="32" className="text-primary" />
-              <p>CEP: 64049110</p>
-            </div>
-            <div className="flex items-center">
-              <MapPin size="32" className="text-primary" />
-              <p>Piaui, Brazil</p>
-            </div>
+              <p>Bairro Jóquei, Teresina/PI</p>
+            </div>            
+            
           </div>
           <ButtonConsulta />
         </div>
@@ -127,15 +121,22 @@ export default function Map() {
           className="flex items-center gap-2 hover:scale-105 transition-all"
           onClick={handleEmailMouseOver}
         >
-          <Mail size="32" className="text-primary" />
-          <p>urovida@gmail.com.br</p>
+          <MdMarkEmailRead size="32" className="text-primary" />
+          <p>clinicaurovida@yahoo.com</p>
         </div>
         <div
           className="flex gap-2 items-center hover:scale-105 transition-all"
           onMouseOver={handlePhoneMouseOver}
         >
-          <MessageCircle size="32" className="text-primary" />
+          <BsWhatsapp size="32" className="text-primary" />
           <p>(86) 9993372499</p>
+        </div>
+        <div
+          className="flex gap-2 items-center hover:scale-105 transition-all"
+          onClick={handleInstagramMouseOver}
+        >
+          <CgInstagram size="32" className="text-primary" />
+          <p>Urovida</p>
         </div>
       </div>
       {showChat && <WhatsAppChat onClose={() => setShowChat(false)} />} {/* Render the chat component */}

@@ -2,7 +2,7 @@
  import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import logo from '../../app/assets/Logo.jpg'
+import logo from '../../app/assets/logo_page-0001.jpg'
  
 const Logo = () => {
   return (
@@ -13,13 +13,12 @@ const Logo = () => {
 
       <Image
       src={logo}
-      width={90}
-      height={90}
+    width={200}
+      height={100}
       alt='Logo'
-      className='rounded-lg h-[80px] w-[80px]' 
+      className='rounded-lg  object-fill ' 
       />
-       <span className="text-primary text-2xl hidden md:flex ">UroVida</span>
-    </Link>
+     </Link>
   );
 }
 
