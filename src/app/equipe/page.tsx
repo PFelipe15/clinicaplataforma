@@ -15,7 +15,7 @@ export default function Equipe() {
     {
       name: 'Dr. Benjamim Carvalho',
       title: 'Urologista',
-      crm: 'CRM 54321',
+      crm: 'CRM 4388',
       graduation: 'Universidade de São Paulo',
       description: 'Renomado urologista com mais de 20 anos de experiência. Ele acredita que a saúde do trato urinário é fundamental para o bem-estar geral.',
       image: DrBenjamim,
@@ -34,7 +34,7 @@ export default function Equipe() {
     {
       name: 'Dr. Luciano Couto',
       title: 'Urologista',
-      crm: 'CRM 67891',
+      crm: 'CRM 2614',
       graduation: 'Universidade Federal do Rio de Janeiro',
       description: 'Dedicado urologista especializado em tratar e prevenir doenças do sistema urinário.',
       image: DrLuciano,
@@ -56,7 +56,7 @@ export default function Equipe() {
     {
       name: 'Dr. Vilson Bezerra',
       title: 'Urologista',
-      crm: 'CRM 11224',
+      crm: 'CRM 6281',
       graduation: 'Universidade Estadual de Campinas',
       description: 'Apaixonado por promover a saúde do sistema urinário com uma abordagem preventiva.',
       image: DrVilson,
@@ -77,64 +77,62 @@ export default function Equipe() {
     },
     {
       name: 'Dr. Candilberto Lopes Filho',
-      title: 'Ortopedista',
-      crm: 'CRM 22334',
-      graduation: 'Universidade Federal de Minas Gerais',
-      description: 'Especialista em ortopedia, focado em reabilitação e cuidados com o sistema musculoesquelético.',
+      title: 'Urologista',
+      crm: 'CRM 5761',
+      graduation: 'Universidade Estadual do Piauí, UESPI, Teresina, Brasil',
+      description: 'Médico graduado pela UNINOVAFAPI; Cirurgião Geral e Urologista pela UESPI.',
       image: Example,
       identificadorFunc: 'CRM',
       detalhes: [
-        'Graduação: Universidade Federal de Minas Gerais',
-        'Especialização: Ortopedia',
-        'Doutorado em Fisiopatologia em Clínica Médica - Área de Concentração em Nefrologia pelo Departamento de Clínica Médica da Faculdade de Medicina de Botucatu - UNESP (2006)',
-        'Residência em Nefrologia pela UNESP (2005)',
-        'Graduação em Medicina pela Universidade Federal do Piauí (2000)',
-        'Título de especialista em nefrologia pela Sociedade Brasileira de Nefrologia (2005)',
-        'Chefe do Setor da Gestão da Pesquisa e Inovação Tecnológica do HU-UFPI',
-        'Presidente da Sociedade Brasileira de Nefrologia - Regional Piauí (Biênio 2023-24)',
-        'Supervisor do Programa de Residência de Clínica Médica do Hospital Getúlio Vargas/UESPI',
-        'Professor Adjunto da Universidade Estadual do Piauí (UESPI)',
-        'Docente na Faculdade Diferencial Integral (UniFacid)',
-        'Coordenador do comitê de especialidades - nefrologia da UNIMED Teresina',
-        'Diretor Técnico do Centro de Terapia Renal - Teresina',
-        'Médico nefrologista do Hospital Universitário (Universidade Federal do Piauí - UFPI)',
-        'Membro da Comissão de Ética Médica do HU-UFPI (2020-2022)',
-        'Área de atuação Nefrologia com ênfase em Insuficiência Renal Aguda'
+        'Graduação: UNINOVAFAPI',
+        'Especialização: Cirurgia Geral e Urologia pela Universidade Estadual do Piauí, UESPI',
+        'Especialização em Médico Auditor pela Sociedade Brasileira de Auditoria Médica, SBAM, Brasil',
+        'Título fornecido por meio de realização de prova título aplicado pela ABRAMPAS - AMB',
+        'Especialização - Residência Médica em Urologia pela Universidade Estadual do Piauí, UESPI',
+        'Especialização - Residência Médica em Cirurgia Geral pela Universidade Estadual do Piauí, UESPI'
       ],
-      textoApresentacao: 'Eu sou o Dr. Candilberto Lopes Filho. Meu objetivo é ajudar meus pacientes a recuperarem sua saúde musculoesquelética.'
+      textoApresentacao: 'Eu sou o Dr. Candilberto Lopes Filho. Meu objetivo é ajudar meus pacientes a recuperarem sua saúde.'
     },
     {
       name: 'Dr. Ginivaldo Victor',
-      title: 'Pediatra',
-      crm: 'CRM 55667',
-      graduation: 'Universidade de Brasília',
-      description: 'Pediatra dedicado à saúde e bem-estar das crianças.',
+      title: 'Nefrologista',
+      crm: 'CRM 2613',
+      graduation: 'Universidade Federal do Piauí',
+      description: 'Doutor em Nefrologia pela UNESP; Especialista em Nefrologia pela SBN.',
       image: Example,
       identificadorFunc: 'CRM',
       detalhes: [
-        'Graduação: Universidade de Brasília',
-        'Especialização: Pediatria'
+        'Doutor em Nefrologia pela UNESP (2006)',
+        'Título de Especialista em Nefrologia pela Sociedade Brasileira de Nefrologia (SBN) (2005)',
+        'Residência em Nefrologia pela UNESP',
+        'Graduação em Medicina pela Universidade Federal do Piauí',
+        'Chefe do Setor da Gestão da Pesquisa e Inovação Tecnológica em Saúde do HU-UFPI',
+        'Supervisor do Programa de Residência de Clínica Médica do Hospital Getúlio Vargas/UESPI',
+        'Professor Adjunto da Universidade Estadual do Piauí (UESPI)',
+        'Docente na Faculdade Diferencial Integral (UniFacid)',
+        'Presidente da SBN-PI (Regional Piauí da Sociedade Brasileira de Nefrologia) 2023-2024',
+        'Conselheiro CRM-PI (2023-2028)'
       ],
-      textoApresentacao: 'Olá! Sou o Dr. Ginivaldo Victor, pediatra com um compromisso absoluto com a saúde infantil.'
+      textoApresentacao: 'Olá! Sou o Dr. Ginivaldo Victor, nefrologista comprometido com a excelência no cuidado renal e com a formação de novos profissionais na área.'
     },
     {
       name: 'Dra. Lorena Soares',
-      title: 'Ginecologista',
-      crm: 'CRM 33445',
+      title: 'Nefrologista',
+      crm: 'CRM 5619',
       graduation: 'Universidade Estadual Paulista',
       description: 'Comprometida com a saúde da mulher e cuidados ginecológicos.',
       image: Example,
       identificadorFunc: 'CRM',
       detalhes: [
-        'Graduação: Universidade Estadual Paulista',
-        'Especialização: Ginecologia'
+        'Clinica Médica pela faculdade de medicina de Jundiaí/SP',
+        'Nefrologista pela USP Ribeirão Preto/SP'
       ],
       textoApresentacao: 'Sou a Dra. Lorena Soares, especialista em saúde da mulher. Estou aqui para apoiar você em todas as suas necessidades ginecológicas.'
     },
     {
       name: 'Dra. Glinia Nogueira',
-      title: 'Dermatologista',
-      crm: 'CRM 66778',
+      title: 'Médicina da Dor/Anestesista',
+      crm: 'CRM 4495',
       graduation: 'Universidade Federal de Pernambuco',
       description: 'Especialista em saúde da pele, tratando e prevenindo doenças dermatológicas.',
       image: DrGlinia,
@@ -153,12 +151,12 @@ export default function Equipe() {
     },
     {
       name: 'Lorena Moura',
-      title: 'Enfermeira',
-      crm: '',
+      title: 'Fisioterapeuta',
+      crm: '152969-F',
       graduation: 'Universidade de São Paulo',
       description: 'Enfermeira dedicada, focada em fornecer cuidados de saúde excepcionais aos pacientes.',
       image: Example,
-      identificadorFunc: 'COREN',
+      identificadorFunc: 'CREFITO',
       detalhes: [
         'Graduação: Universidade de São Paulo',
         'Área de Atuação: Enfermagem Clínica'
@@ -167,7 +165,7 @@ export default function Equipe() {
     },
     {
       name: 'Lara Feitosa',
-      title: 'Enfermeira',
+      title: 'Gerente',
       crm: '',
       graduation: 'Universidade Federal do Rio de Janeiro',
       description: 'Enfermeira empenhada em promover a saúde através da alimentação equilibrada.',
@@ -181,7 +179,7 @@ export default function Equipe() {
     },
     {
       name: 'Viviane Lima',
-      title: 'Enfermeira',
+      title: 'Recepcionista',
       crm: '',
       graduation: 'Universidade Estadual de Campinas',
       description: 'Enfermeira com foco em saúde mental e bem-estar emocional dos pacientes.',
@@ -195,7 +193,7 @@ export default function Equipe() {
     },
     {
       name: 'Ingred',
-      title: 'Enfermeira',
+      title: 'Técnica de Enfermagem',
       crm: '',
       graduation: 'Universidade de Brasília',
       description: 'Enfermeira dedicada à reabilitação e melhoria da qualidade de vida dos pacientes.',
