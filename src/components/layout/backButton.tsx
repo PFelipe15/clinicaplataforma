@@ -6,8 +6,7 @@ import { Button } from "../ui/button";
 
 export default function BackButton() {
     const pathname = usePathname();
-    console.log(pathname);
-    return (
+     return (
         <div>
               {pathname != "/" ? (
             <Link href="/">

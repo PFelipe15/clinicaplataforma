@@ -15,11 +15,11 @@ export function Main() {
     <div className="flex flex-col justify-center items-center">
       <CarrouselBannerMain />
 
-      <div className="flex bg-secondary my-10 p-10 items-center     justify-center">
+      <div className="flex   bg-secondary my-10 p-10 items-center     justify-center">
         <Tratamentos />
       </div>
 
-<div className="flex  items-center justify-between container ">
+<div className="flex  flex-col md:flex-row items-center justify-between  container ">
 
       <div className="max-w-[100vw] h-[400px] w-[720px] relative flex-col bg-banner2 bg-cover flex items-center justify-center">
         <div className="absolute inset-0 bg-white/40 backdrop-blur-sm">
@@ -41,28 +41,23 @@ export function Main() {
 </div>
 
       {/* Seção de Teleconsultas */}
-      <div className="flex bg-telecomunicacoes bg-cover bg-center text-black min-h-[560px] flex-col py-10 my-10 rounded-md items-center w-full justify-center transform transition-transform duration-500">
-        <div className="mb-8 text-center bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-4xl font-bold">Tele-consultas 🛜</h2>
-          <p className="text-xl font-semibold mt-2">
-            A UROVIDA também oferece serviços de teleconsultas para maior
-            comodidade e melhor comunicação.
-          </p>
-
-        </div>
-        <p className="text-lg px-4 mb-4 bg-primary text-white p-4 rounded-lg shadow-md">
-          Agende suas consultas online com nossos especialistas de forma rápida
-          e segura, sem sair de casa. Oferecemos atendimento remoto em Urologia,
-          Nefrologia, Medicina da Dor, Acupuntura, e Fisioterapia Pélvica.
-        </p>
-
-        <div className="flex gap-4 items-center ">
-          <ButtonConsulta />
-          <Link href={'/equipe'}>
-            <Button className="text-sm md:text-base">Nossos Medicos</Button>
-          </Link>
-        </div>
-      </div>
+      <div className="flex max-w-sm sm:p-4 lg:max-w-full flex-col items-center justify-center w-full min-h-[560px] py-10 my-10 bg-telecomunicacoes bg-cover bg-center text-black rounded-md transform transition-transform duration-500">
+  <div className="mb-8 text-center bg-white p-6 rounded-lg shadow-md">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Tele-consultas 🛜</h2>
+    <p className="text-lg  sm:text-xl font-semibold mt-2">
+      A UROVIDA também oferece serviços de teleconsultas para maior comodidade e melhor comunicação.
+    </p>
+  </div>
+  <p className="text-base sm:text-lg px-4 mb-4 bg-primary text-white p-4 rounded-lg shadow-md text-center">
+    Agende suas consultas online com nossos especialistas de forma rápida e segura, sem sair de casa. Oferecemos atendimento remoto em Urologia, Nefrologia, Medicina da Dor, Acupuntura, e Fisioterapia Pélvica.
+  </p>
+  <div className="flex flex-col sm:flex-row gap-4 items-center">
+    <ButtonConsulta />
+    <Link href={'/equipe'}>
+      <Button className="text-sm md:text-base">Nossos Médicos</Button>
+    </Link>
+  </div>
+</div>
 
       <div className="flex container bg-secondary text-white flex-col py-10 my-10 rounded-md items-center w-full justify-center">
         <div className="mb-4">

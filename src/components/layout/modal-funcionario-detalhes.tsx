@@ -19,7 +19,7 @@ function FuncionarioDetalhesModal({
   const detalhesToShow = showAll ? funcionarioDetalhes.detalhes : funcionarioDetalhes.detalhes.slice(0, 10);
 
   return (
-    <div className="fixed inset-0 pt-10 flex items-center justify-center z-50 bg-white bg-opacity-70">
+    <div className="fixed inset-0 flex  items-end justify-center z-30 bg-white bg-opacity-70">
       <div className="bg-white rounded-lg shadow-lg border-2 border-primary p-6 w-full max-w-lg transform transition-all duration-300 opacity-100 overflow-y-auto max-h-full">
         <button
           onClick={onClose}

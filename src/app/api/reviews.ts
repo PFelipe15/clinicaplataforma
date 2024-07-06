@@ -5,7 +5,6 @@
     );
 
      const data = await response.json();
-     console.log(data);
     return data.result;
   }
  async function fetchGooglePlacePhotosDetails() {

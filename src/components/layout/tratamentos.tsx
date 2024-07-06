@@ -12,15 +12,15 @@ export default function Tratamentos() {
   }
 
   return (
-    <div className="flex items-center  justify-center  flex-col">
-      <h1 className="text-3xl text-center text-white font-semibold mb-8 animate-fadeIn">
+    <div className="flex items-center p-4  justify-center  flex-col">
+      <h1 className=" text-xl lg:text-3xl text-center text-white font-semibold mb-8 animate-fadeIn">
          Conheça nossos principais tratamentos
       </h1>
 
       <Carousel  opts={{
         align: "center",
       }}
-      className="w-full ">
+      className="max-w-sm md:max-w-full ">
   <CarouselContent >
     {exames.map((exame: Exame, index: number) => (
       <CarouselItem
