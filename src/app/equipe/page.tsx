@@ -6,7 +6,7 @@ import Example from '../assets/Medicos.jpg'
 import DrVilson from '../assets/Funcionarios/drVilson3.jpg'
 import DrGlinia from '../assets/Funcionarios/Glinia-19.jpg'
 import DrLuciano from '../assets/Funcionarios/Propietario3[0].jpg'
-import DrBenjamim from '../assets/Funcionarios/Propietario1[2].jpg'
+import DrBenjamim from '../assets/Funcionarios/Propietario2[1].jpg'
 import { Funcionario } from '../_types/funcionario';
 export default function Equipe() {
   const [selectedFuncionario, setSelectedFuncionario] = useState<Funcionario | null>(null);
