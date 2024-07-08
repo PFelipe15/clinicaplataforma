@@ -3,12 +3,12 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import FuncionarioDetalhesModal from '@/components/layout/modal-funcionario-detalhes';
 import Example from '../assets/LogoQualidadeAlta.jpg'
-import DrVilson from '../assets/Funcionarios/drVilson4.jpg'
+import DrVilson from '../assets/Funcionarios/DrVilsonPerfil.jpg'
 import DrGlinia from '../assets/Funcionarios/Glinia-19.jpg'
 import DrLuciano from '../assets/Funcionarios/DrLuciano.jpg'
-import DrCandiberto from '../assets/Funcionarios/drCandiberto.jpg'
-import Lara from '../assets/Funcionarios/Funcionaria2[1].jpg'
-import DrBenjamim from '../assets/Funcionarios/Propietario1[2].jpg'
+import DrCandiberto from '../assets/Funcionarios/DrCandilbertoPerfil.jpg'
+import Lara from '../assets/Funcionarios/LaraGerente.jpg'
+import DrBenjamim from '../assets/Funcionarios/DrBenjaminPerfil.jpg'
 import LorenaMoura from '../assets/Funcionarios/LorenaMoura.jpg'
 import { Funcionario } from '../_types/funcionario';
 export default function Equipe() {
