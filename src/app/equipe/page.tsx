@@ -173,7 +173,7 @@ export default function Equipe() {
       graduation: 'Universidade Federal do Rio de Janeiro',
       description: 'Enfermeira empenhada em promover a saúde através da alimentação equilibrada.',
       image: Lara,
-      identificadorFunc: 'COREN',
+      identificadorFunc: '',
       detalhes: [
         'Graduação: Universidade Federal do Rio de Janeiro',
         'Área de Atuação: Enfermagem Nutricional'
@@ -187,7 +187,7 @@ export default function Equipe() {
       graduation: 'Universidade Estadual de Campinas',
       description: 'Enfermeira com foco em saúde mental e bem-estar emocional dos pacientes.',
       image: Example,
-      identificadorFunc: 'COREN',
+      identificadorFunc: '',
       detalhes: [
         'Graduação: Universidade Estadual de Campinas',
         'Área de Atuação: Enfermagem Psiquiátrica'
@@ -201,7 +201,7 @@ export default function Equipe() {
       graduation: 'Universidade de Brasília',
       description: 'Enfermeira dedicada à reabilitação e melhoria da qualidade de vida dos pacientes.',
       image: Example,
-      identificadorFunc: 'COREN',
+      identificadorFunc: '',
       detalhes: [
         'Graduação: Universidade de Brasília',
         'Área de Atuação: Enfermagem de Reabilitação'
@@ -243,10 +243,14 @@ export default function Equipe() {
                 {member.name}
               </h2>
               <h3 className="text-xl text-indigo-600 mb-2">{member.title}</h3>
+             
+             {member.identificadorFunc && (
+
               <p className="mb-1 bg-primary text-white p-1 rounded-md">
                 {`${member.identificadorFunc} ${member.crm}`}
                 
               </p>
+             )}
             </button>
           </div>
         ))}

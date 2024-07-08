@@ -41,7 +41,7 @@ export function Main() {
 </div>
 
       {/* Seção de Teleconsultas */}
-      <div className="flex max-w-sm sm:p-4 lg:max-w-full flex-col items-center justify-center w-full min-h-[560px] py-10 my-10 bg-telecomunicacoes bg-cover bg-center text-black rounded-md transform transition-transform duration-500">
+      <div className="flex max-w-sm sm:p-4 lg:max-w-screen-2xl flex-col items-center justify-center w-full min-h-[560px] py-10 my-10 bg-telecomunicacoes bg-cover bg-center text-black rounded-md transform transition-transform duration-500">
   <div className="mb-8 text-center bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Tele-consultas 🛜</h2>
     <p className="text-lg  sm:text-xl font-semibold mt-2">

@@ -55,7 +55,7 @@ export default function MenuNav() {
                   <MenubarItem>Teste de Ereção Fármaco-Induzida</MenubarItem>
                 </Link>
                 <Link href={"/exames-tratamentos/exames/urofluxometria"}>
-                  <MenubarItem>urofluxometria</MenubarItem>
+                  <MenubarItem>Urofluxometria</MenubarItem>
                 </Link>
                 <Link href={"/exames-tratamentos/exames/urodinamica-completa"}>
                   <MenubarItem>Urodinâmica Completa</MenubarItem>
