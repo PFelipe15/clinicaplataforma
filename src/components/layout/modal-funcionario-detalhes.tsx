@@ -19,7 +19,7 @@ function FuncionarioDetalhesModal({
   const detalhesToShow = showAll ? funcionarioDetalhes.detalhes : funcionarioDetalhes.detalhes.slice(0, 10);
 
   return (
-    <div className="fixed inset-0 flex  items-end justify-center z-30 bg-white bg-opacity-70">
+    <div className="fixed inset-0 flex max-w-[100vw] p-4  items-center justify-center z-30 bg-white bg-opacity-70">
       <div className="bg-white rounded-lg shadow-lg border-2 border-primary p-6 w-full max-w-lg transform transition-all duration-300 opacity-100 overflow-y-auto max-h-full">
         <button
           onClick={onClose}
@@ -42,10 +42,9 @@ function FuncionarioDetalhesModal({
             <p className="text-indigo-600">{funcionarioDetalhes.title}</p>
           </div>
         </div>
-        <p className="mb-4 text-center">{funcionarioDetalhes.textoApresentacao}</p>
-        <div className="text-center mb-4">
+         <div className="text-left mb-4">
           <h4 className="text-lg font-bold mb-2">Detalhes:</h4>
-          <ul className="text-gray-600 list-disc pl-6 max-h-96 overflow-y-auto">
+          <ul className="text-gray-600 list-disc pl-6  max-h-44 md:max-h-80 overflow-y-auto">
             {detalhesToShow.map((detalhe, index) => (
               <li key={index}>{detalhe}</li>
             ))}

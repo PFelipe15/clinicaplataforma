@@ -25,6 +25,10 @@ export default function Tratamentos() {
     {exames.map((exame: Exame, index: number) => (
       <CarouselItem
         key={index}
+        onClick={() => {
+          setIsFullScreen(true);
+          setFullScreenImage(photo);
+        }}
         className="flex items-center justify-center sm:basis-full md:basis-1/3 lg:basis-1/6 pl-4"
       >
         <Link href={exame.link} key={index}>
@@ -52,8 +56,8 @@ export default function Tratamentos() {
  
     
   </CarouselContent>
-  <CarouselPrevious className="bg-secondary hover:bg-black -left-[50px]" />
-  <CarouselNext className="hover:bg-black -right-[50px]" />
+  <CarouselPrevious className="bg-secondary hover:bg-black -left-[5px]" />
+  <CarouselNext className="hover:bg-black -right-[5px]" />
 </Carousel>
 
     </div>

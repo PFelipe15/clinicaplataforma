@@ -2,11 +2,14 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import FuncionarioDetalhesModal from '@/components/layout/modal-funcionario-detalhes';
-import Example from '../assets/Medicos.jpg'
-import DrVilson from '../assets/Funcionarios/drVilson3.jpg'
+import Example from '../assets/LogoQualidadeAlta.jpg'
+import DrVilson from '../assets/Funcionarios/drVilson4.jpg'
 import DrGlinia from '../assets/Funcionarios/Glinia-19.jpg'
-import DrLuciano from '../assets/Funcionarios/Propietario3[0].jpg'
-import DrBenjamim from '../assets/Funcionarios/Propietario2[1].jpg'
+import DrLuciano from '../assets/Funcionarios/DrLuciano.jpg'
+import DrCandiberto from '../assets/Funcionarios/drCandiberto.jpg'
+import Lara from '../assets/Funcionarios/Funcionaria2[1].jpg'
+import DrBenjamim from '../assets/Funcionarios/Propietario1[2].jpg'
+import LorenaMoura from '../assets/Funcionarios/LorenaMoura.jpg'
 import { Funcionario } from '../_types/funcionario';
 export default function Equipe() {
   const [selectedFuncionario, setSelectedFuncionario] = useState<Funcionario | null>(null);
@@ -15,7 +18,7 @@ export default function Equipe() {
     {
       name: 'Dr. Benjamim Carvalho',
       title: 'Urologista',
-      crm: 'CRM 4388',
+      crm: '4388',
       graduation: 'Universidade de São Paulo',
       description: 'Renomado urologista com mais de 20 anos de experiência. Ele acredita que a saúde do trato urinário é fundamental para o bem-estar geral.',
       image: DrBenjamim,
@@ -34,7 +37,7 @@ export default function Equipe() {
     {
       name: 'Dr. Luciano Couto',
       title: 'Urologista',
-      crm: 'CRM 2614',
+      crm: '2614',
       graduation: 'Universidade Federal do Rio de Janeiro',
       description: 'Dedicado urologista especializado em tratar e prevenir doenças do sistema urinário.',
       image: DrLuciano,
@@ -56,7 +59,7 @@ export default function Equipe() {
     {
       name: 'Dr. Vilson Bezerra',
       title: 'Urologista',
-      crm: 'CRM 6281',
+      crm: '6281',
       graduation: 'Universidade Estadual de Campinas',
       description: 'Apaixonado por promover a saúde do sistema urinário com uma abordagem preventiva.',
       image: DrVilson,
@@ -81,7 +84,7 @@ export default function Equipe() {
       crm: 'CRM 5761',
       graduation: 'Universidade Estadual do Piauí, UESPI, Teresina, Brasil',
       description: 'Médico graduado pela UNINOVAFAPI; Cirurgião Geral e Urologista pela UESPI.',
-      image: Example,
+      image: DrCandiberto,
       identificadorFunc: 'CRM',
       detalhes: [
         'Graduação: UNINOVAFAPI',
@@ -96,7 +99,7 @@ export default function Equipe() {
     {
       name: 'Dr. Ginivaldo Victor',
       title: 'Nefrologista',
-      crm: 'CRM 2613',
+      crm: '2613',
       graduation: 'Universidade Federal do Piauí',
       description: 'Doutor em Nefrologia pela UNESP; Especialista em Nefrologia pela SBN.',
       image: Example,
@@ -118,7 +121,7 @@ export default function Equipe() {
     {
       name: 'Dra. Lorena Soares',
       title: 'Nefrologista',
-      crm: 'CRM 5619',
+      crm: '5619',
       graduation: 'Universidade Estadual Paulista',
       description: 'Comprometida com a saúde da mulher e cuidados ginecológicos.',
       image: Example,
@@ -132,7 +135,7 @@ export default function Equipe() {
     {
       name: 'Dra. Glinia Nogueira',
       title: 'Médicina da Dor/Anestesista',
-      crm: 'CRM 4495',
+      crm: '4495',
       graduation: 'Universidade Federal de Pernambuco',
       description: 'Especialista em saúde da pele, tratando e prevenindo doenças dermatológicas.',
       image: DrGlinia,
@@ -155,7 +158,7 @@ export default function Equipe() {
       crm: '152969-F',
       graduation: 'Universidade de São Paulo',
       description: 'Enfermeira dedicada, focada em fornecer cuidados de saúde excepcionais aos pacientes.',
-      image: Example,
+      image: LorenaMoura,
       identificadorFunc: 'CREFITO',
       detalhes: [
         'Graduação: Universidade de São Paulo',
@@ -169,7 +172,7 @@ export default function Equipe() {
       crm: '',
       graduation: 'Universidade Federal do Rio de Janeiro',
       description: 'Enfermeira empenhada em promover a saúde através da alimentação equilibrada.',
-      image: Example,
+      image: Lara,
       identificadorFunc: 'COREN',
       detalhes: [
         'Graduação: Universidade Federal do Rio de Janeiro',
@@ -227,13 +230,13 @@ export default function Equipe() {
             className="bg-white hover:border-primary hover:border-2 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 p-6 text-center"
           >
             <button onClick={() => handleOpenModal(member)} className="focus:outline-none">
-              <div className="relative w-32 h-32 mx-auto mb-4">
+              <div className="relative  mx-auto mb-4">
                 <Image
                   src={member.image}
                   alt={member.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-full"
+                
+          
+                  className="rounded-lg object-cover"
                 />
               </div>
               <h2 className="text-2xl font-bold mb-2 text-black p-2 rounded-md">
@@ -241,7 +244,8 @@ export default function Equipe() {
               </h2>
               <h3 className="text-xl text-indigo-600 mb-2">{member.title}</h3>
               <p className="mb-1 bg-primary text-white p-1 rounded-md">
-                {member.identificadorFunc === 'CRM' ? member.crm : `COREN ${member.crm}`}
+                {`${member.identificadorFunc} ${member.crm}`}
+                
               </p>
             </button>
           </div>

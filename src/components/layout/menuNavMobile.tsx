@@ -18,13 +18,13 @@ export default function MenuMobile() {
   return (
     <div className="md:hidden">
       <button
-        className="p-2 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+        className=" flex rounded-md focus:outline-none focus:ring focus:border-blue-300"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <MenuIcon className="h-6 w-6 text-secondary" />
       </button>
       {isMenuOpen && (
-        <div className="absolute left-0 top-0   bg-white w-screen h-screen shadow-md">
+        <div className="absolute left-0 top-0  bg-white w-screen h-screen shadow-md">
           <button
             className="p-2 rounded-md focus:outline-none focus:ring focus:border-blue-300 "
             onClick={() => setIsMenuOpen(!isMenuOpen)}

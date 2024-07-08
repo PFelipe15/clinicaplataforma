@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import Image1 from '../assets/Funcionarios/Propietario2[1].jpg';
-import Image2 from '../assets/Medicos2.jpg';
-import Image, { StaticImageData } from 'next/image';
+import Image1 from '../assets/clinica.jpg';
+ import Image, { StaticImageData } from 'next/image';
 import { Maximize2, X } from 'lucide-react';
 import { fetchGooglePlacePhotosDetails } from '../api/reviews';
+import Galeria from '@/components/layout/galeria';
 
 interface Photo {
   height: number;
@@ -91,67 +91,29 @@ const Clinica = () => {
         </ul>
       </div>
 
-      <div className="mt-8 flex gap-4 text-center flex-col lg:flex-row lg:text-left justify-between items-center border-b-2 border-primary py-4">
-        <div className="flex flex-col">
-          <h1 className="text-3xl text-primary font-semibold mb-8">Nosso estabelecimento</h1>
+      <div className="mt-8 flex gap-4 text-center flex-col lg:flex-row lg:text-left justify-between  border-b-2 border-primary py-4">
+        <div className="flex flex-col gap-10">
+          <h1 className="text-3xl text-primary font-semibold">Nosso estabelecimento</h1>
           <p className="text-xl max-w-prose">
-            Nosso estabelecimento é projetado para oferecer um ambiente acolhedor e confortável, onde cada paciente é tratado com respeito e dignidade. Com instalações modernas e uma equipe dedicada de profissionais de saúde, estamos comprometidos em proporcionar a melhor experiência possível desde a recepção até o atendimento especializado. Nossos consultórios são equipados com tecnologia de ponta para garantir diagnósticos precisos e tratamentos eficazes, sempre priorizando a segurança e o bem-estar dos nossos pacientes. Trabalhamos incansavelmente para criar um espaço onde a saúde e a recuperação são o foco principal, promovendo um cuidado integral e humanizado.
+          Nosso estabelecimento oferece um ambiente acolhedor, onde cada paciente é tratado com respeito e dignidade. Contamos com instalações modernas e uma equipe dedicada para garantir uma excelente experiência desde a recepção até o atendimento especializado. Nossos consultórios, equipados com tecnologia de ponta, asseguram diagnósticos precisos e tratamentos eficazes, priorizando sempre a segurança e o bem-estar dos pacientes
           </p>
         </div>
         <Image
           src={Image1}
           className="animate-fadeIn"
           alt="Clínica"
-          width={700}
-          height={800}
+          width={600}
+          height={400}
         />
       </div>
 
       <div className="mt-8">
         <h1 className="text-3xl text-primary font-semibold mb-8">Galeria</h1>
-        <div  className="mt-8 grid grid-cols-1 animate-fadeIn sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {clinicPhotos.map((photo, index) => (
-            <div key={index}  onClick={() => {
-              setIsFullScreen(true);
-              setFullScreenImage(photo);
-            }} className="transition-all rounded-lg relative hover:border-primary border-2 hover:scale-95">
-              <Image
-                src={photo.src}
-                alt="Clínica"
-                width={photo.width} // Define o tamanho baseado nos dados recebidos
-                height={photo.height} // Define o tamanho baseado nos dados recebidos
-                className="animate-fadeIn object-cover h-[600px]
-                "
-              />
-             
-            </div>
-          ))}
-        </div>
+          <Galeria/>
+       
       </div>
-
-      {isFullScreen && fullScreenImage && (
-        <div className="fixed inset-0 bg-opacity-50 z-50 flex justify-center items-center max-w-screen max-h-screen">
-          <div className="flex flex-col items-center bg-white p-4 rounded-lg shadow-lg  max-w-lg">
-            <div className="flex">
-              <Image
-                src={fullScreenImage.src}
-                alt="Clínica"
-                width={fullScreenImage.width}
-                height={fullScreenImage.height}
-                className="rounded-lg object-contain max-h-[500px]"
-              />
-              <X
-                size={25}
-                className="absolute text-white bg-primary rounded-md m-4 cursor-pointer"
-                onClick={() => {
-                  setIsFullScreen(false);
-                  setFullScreenImage(null);
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      
+      
     </div>
   );
 };

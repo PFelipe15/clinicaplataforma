@@ -12,17 +12,14 @@ export function Header() {
       <div className="hidden md:block">
         <MenuNav />
       </div>
-      <div className="flex   gap-4">
-      <div className="flex gap-2">
+      <div className="flex gap-4">
+      <div className="flex gap-2 items-center justify-center">
 
       <InstagramButton/>
-
         <ButtonConsulta />
+         <MenuMobile />
       </div>
-      <div className="md:hidden">
-        <MenuMobile />
-      </div>
-      </div>
+       </div>
     </div>
   );
 }
