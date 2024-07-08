@@ -25,10 +25,7 @@ export default function Tratamentos() {
     {exames.map((exame: Exame, index: number) => (
       <CarouselItem
         key={index}
-        onClick={() => {
-          setIsFullScreen(true);
-          setFullScreenImage(photo);
-        }}
+         
         className="flex items-center justify-center sm:basis-full md:basis-1/3 lg:basis-1/6 pl-4"
       >
         <Link href={exame.link} key={index}>

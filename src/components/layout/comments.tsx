@@ -65,8 +65,8 @@ export default function Comments() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="bg-secondary hover:bg-black -left-[50px]" />
-      <CarouselNext className="hover:bg-black -right-[50px]" />
+      <CarouselPrevious className="bg-secondary hover:bg-black -left-[30px]" />
+      <CarouselNext className="hover:bg-black -right-[30px]" />
     </Carousel>
   );
 }
