@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import VasectomiaImage from '../../../assets/vasectomia.jpeg'
 export default function Vasectomia() {
     return (
         <div className="mx-auto p-6 bg-gray-200 rounded-lg shadow-md">
@@ -18,7 +18,7 @@ export default function Vasectomia() {
                     O procedimento é feito sob anestesia local. Pequenas incisões são feitas no escroto para acessar os canais deferentes, que são cortados e selados.
                 </p>
                 <Image
-                    src="https://via.placeholder.com/600x400"
+                    src={VasectomiaImage}
                     alt="Vasectomia"
                     width={600}
                     height={400}

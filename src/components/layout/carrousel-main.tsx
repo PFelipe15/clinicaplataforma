@@ -39,7 +39,7 @@ export default function CarrouselBannerMain() {
               </div>
               <div className="flex gap-4 jus flex-col">
 
-              <h1 className="text-2xl md:text-5xl text-white max-w-[95vw] md:max-w-[1200px] p-4 animate-typing bg-primary rounded-md transition-all">
+              <h1 className="text-2xl md:text-5xl mt-0 md:mt-80 text-white max-w-[95vw] md:max-w-[1200px] p-4 animate-typing bg-primary rounded-md transition-all">
                 O cuidado que transforma vidas, encontrando conforto e cura em cada
                 consulta.
               </h1>
