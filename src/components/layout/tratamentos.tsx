@@ -45,7 +45,7 @@ export default function Tratamentos() {
               className="rounded-lg mb-4"
             />
            
-            <p className="text-sm text-gray-600 max-w-[350px] text-justify p-4">{exame.descricao}</p>
+            <p className="text-sm text-gray-600 max-w-sm text-justify p-4">{exame.descricao}</p>
              </div>
         </Link>
       </CarouselItem>
