@@ -10,6 +10,8 @@ import DrCandiberto from '../assets/Funcionarios/DrCandilbertoPerfil.jpg'
 import Lara from '../assets/Funcionarios/LaraGerente.jpg'
 import DrBenjamim from '../assets/Funcionarios/DrBenjaminPerfil.jpg'
 import LorenaMoura from '../assets/Funcionarios/LorenaMoura.jpg'
+import DrLorena from '../assets/Funcionarios/DrLorena.jpg'
+import DrGenivaldo from '../assets/Funcionarios/DrGenivaldo.jpg'
 import { Funcionario } from '../_types/funcionario';
 export default function Equipe() {
   const [selectedFuncionario, setSelectedFuncionario] = useState<Funcionario | null>(null);
@@ -102,7 +104,7 @@ export default function Equipe() {
       crm: '2613',
       graduation: 'Universidade Federal do Piauí',
       description: 'Doutor em Nefrologia pela UNESP; Especialista em Nefrologia pela SBN.',
-      image: Example,
+      image: DrGenivaldo,
       identificadorFunc: 'CRM',
       detalhes: [
         'Doutor em Nefrologia pela UNESP (2006)',
@@ -124,7 +126,7 @@ export default function Equipe() {
       crm: '5619',
       graduation: 'Universidade Estadual Paulista',
       description: 'Comprometida com a saúde da mulher e cuidados ginecológicos.',
-      image: Example,
+      image: DrLorena,
       identificadorFunc: 'CRM',
       detalhes: [
         'Clinica Médica pela faculdade de medicina de Jundiaí/SP',
@@ -234,9 +236,9 @@ export default function Equipe() {
                 <Image
                   src={member.image}
                   alt={member.name}
-                
+    
           
-                  className="rounded-lg object-cover"
+                  className="rounded-lg h-[550px] object-cover"
                 />
               </div>
               <h2 className="text-2xl font-bold mb-2 text-black p-2 rounded-md">
