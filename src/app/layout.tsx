@@ -6,22 +6,28 @@ import { Raleway } from 'next/font/google';
 import Map from "@/components/layout/map/map";
 import Footer from "@/components/layout/footer";
 import BackButton from "@/components/layout/backButton";
-import { NavigationUrls } from "@/components/layout/navigationurls";
+import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: "Urovida - Clínica Urológica de Confiança",
+  title:{
+    default: "Urovida - Clínica Urológica de Confiança",
+   template:"%s | Urovida - Clínica Urológica de Confiança"
+  },
   description: "Encontre conforto e cura na Urovida. Oferecemos consultas em Urologia, Nefrologia, Medicina da Dor, Acupuntura e Fisioterapia Pélvica. Marque sua teleconsulta hoje mesmo!",
   keywords: "clínica urológica, urologia, teleconsultas, nefrologia, medicina da dor, acupuntura, fisioterapia pélvica, saúde masculina",
+  
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://www.clinicaurovida.com.br',
     title: 'Urovida - Clínica Urológica de Confiança',
     description: 'Encontre conforto e cura na Urovida. Oferecemos consultas em Urologia, Nefrologia, Medicina da Dor, Acupuntura e Fisioterapia Pélvica. Marque sua teleconsulta hoje mesmo!',
-   
+    
     siteName: 'Urovida',
   },
-  
+    robots:{ index: true, follow: true },
+  alternates:{ canonical: "https://www.clinicaurovida.com.br" }
+
 };
 
 const poetsen = Raleway({ weight: ['400', '700', '200', '500', '600'], subsets: ['latin'] });
@@ -60,7 +66,7 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR">
-      <head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="Portuguese"/>
@@ -77,7 +83,7 @@ export default function RootLayout({
         <meta name="twitter:creator" content="@urovida"/>
         <meta name="twitter:title" content="Urovida - Clínica Urológica de Confiança"/>
         <meta name="twitter:description" content="Encontre conforto e cura na Urovida. Oferecemos consultas em Urologia, Nefrologia, Medicina da Dor, Acupuntura e Fisioterapia Pélvica. Marque sua teleconsulta hoje mesmo!"/>
-      </head>
+      </Head>
       <body
         className={cn("min-h-screen min-w-[300px] flex flex-col", poetsen.className)}
       >

@@ -12,8 +12,7 @@
       `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJh62y6ZY7jgcRsOBQPd4jhy8&fields=name,photo&key=${process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY}`
     );
       const data = await response.json();
-      console.log(data);
-    
+     
     return data.result;
   }
   
