@@ -18,11 +18,12 @@ export default function MenuNav() {
             <MenubarTrigger href={"/"}>Home</MenubarTrigger>
           </Link>
         </MenubarMenu>
-        <MenubarMenu>
+        {/* Retirado mediante pedido */}
+        {/* <MenubarMenu>
           <Link href={"/about-me"}>
             <MenubarTrigger href={"/about-me"}>Quem Somos</MenubarTrigger>
           </Link>{" "}
-        </MenubarMenu>
+        </MenubarMenu> */}
         <MenubarMenu>
           <Link href={"/equipe"}>
             <MenubarTrigger href={"/equipe"}>Nossa Equipe</MenubarTrigger>
@@ -104,8 +105,8 @@ export default function MenuNav() {
           </MenubarContent>
         </MenubarMenu>
         <MenubarMenu>
-        <Link href="/blog">
-          <MenubarTrigger href="/blog">Blog</MenubarTrigger>
+        <Link href="/noticias">
+          <MenubarTrigger href="/noticias">Noticias</MenubarTrigger>
 
         </Link>
 

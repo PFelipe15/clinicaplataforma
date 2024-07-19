@@ -62,7 +62,7 @@ export function Main() {
       <div className="flex container bg-secondary text-white flex-col py-10 my-10 rounded-md items-center w-full justify-center">
         <div className="mb-4">
           <h2 className="text-4xl font-bold text-center">
-            Tratamentos Populares
+           Outros Tratamentos especializados
           </h2>
           <p className="text-xl font-bold text-center">
             Contamos com especialistas em Urologia, Nefrologia, Medicina da Dor,

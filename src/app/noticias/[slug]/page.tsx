@@ -2,7 +2,7 @@
  import { getPost } from '@/app/_services/notion';
  import ReactMarkdown from 'react-markdown';
 import VideoEmbed from '@/components/layout/IframeVideo';
- export default async function BlogPost({params}:{params:{slug:string}}) {
+export default async function BlogPost({params}:{params:{slug:string}}) {
   const decodedSlug = decodeURIComponent(params.slug);
  ;
   const post = await getPost(decodedSlug);

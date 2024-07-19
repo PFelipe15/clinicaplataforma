@@ -9,7 +9,7 @@ export default async function BlogHome() {
     return (
      <div className="container mx-auto p-6">
        <h1 className="text-4xl font-bold text-center mb-8 text-primary">
-         Nosso Blog
+        Nossas Noticias
        </h1>
        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
          {postsNotion.map((post, index) => (
@@ -49,7 +49,7 @@ export default async function BlogHome() {
 
                {post.slug !=  undefined && post.title != "Em construção" ? (
                  <Link
-                   href={`/blog/${post.slug}`}
+                   href={`/noticias/${post.slug}`}
                    className="flex items-center justify-center text-white px-4 py-2 rounded hover:bg-secondary transition-all bg-primary"
                  >
                    Ver mais

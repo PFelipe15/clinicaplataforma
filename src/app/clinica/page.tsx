@@ -6,43 +6,11 @@ import { Maximize2, X } from 'lucide-react';
 import { fetchGooglePlacePhotosDetails } from '../api/reviews';
 import Galeria from '@/components/layout/galeria';
 
-interface Photo {
-  height: number;
-  html_attributions: string[];
-  photo_reference: string;
-  width: number;
-}
 
-interface PlaceDetails {
-  name: string;
-  photos: Photo[];
-}
 
 const Clinica = () => {
 
-  const [isFullScreen, setIsFullScreen] = useState(false);
-  const [fullScreenImage, setFullScreenImage] = useState<StaticImageData | null>(null);
-  const [clinicPhotos, setClinicPhotos] = useState<{ src: string; width: number; height: number; }[]>([]);
 
-  useEffect(() => {
-    const getPhotosDetails = async () => {
-      try {
-        const imagesData:PlaceDetails = await fetchGooglePlacePhotosDetails();
-         const photoUrls = imagesData.photos.map((photo) => {
-           return {
-            src: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${photo.width}&photoreference=${photo.photo_reference}&key=${process.env.NEXT_PUBLIC_GOOGLEAPIS_PUBLISHABLE_KEY}`,
-            width: photo.width,
-            height: photo.height,
-          };
-        });
-        setClinicPhotos(photoUrls);
-      } catch (error) {
-        console.error('Erro ao buscar fotos da clínica:', error);
-      }
-    };
-
-    getPhotosDetails();
-  }, []);
 
   return (
     <div className="container flex flex-col p-8">

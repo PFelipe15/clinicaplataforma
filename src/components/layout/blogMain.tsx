@@ -50,7 +50,7 @@ export default async function BlogMain() {
 
                  {post.slug != undefined && post.title != "Em construção" ? (
                    <Link
-                     href={`/blog/${post.slug}`}
+                     href={`/noticias/${post.slug}`}
                      className="flex items-center justify-center text-white px-4 py-2 rounded hover:bg-secondary transition-all bg-primary"
                    >
                      Ver mais
@@ -65,7 +65,7 @@ export default async function BlogMain() {
            ))}
          </div>
 
-         <Link href={"/blog"}  className="m-8 font-bold">
+         <Link href={"/noticias"}  className="m-8 font-bold">
           <Button className="bg-primary text-white">
             Ver Todas as Noticias
           </Button>

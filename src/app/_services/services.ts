@@ -1,5 +1,21 @@
 import ImageExample from "../assets/LogoQualidadeAlta.jpg";
-
+import equipamento1 from '../assets/Clinica/DSC00096.webp'
+import equipamento2 from '../assets/Clinica/DSC00098.webp'
+import equipamento3 from '../assets/Clinica/DSC00108.webp'
+import equipamento5 from '../assets/Clinica/DSC00111.webp'
+import equipamento6 from '../assets/Clinica/DSC00115.webp'
+import equipamento7 from '../assets/Clinica/DSC00125.webp'
+import equipamento8 from '../assets/Clinica/DSC00127.webp'
+import equipamento9 from '../assets/Clinica/DSC00130.webp'
+import equipamento10 from '../assets/Clinica/DSC00132.webp'
+import equipamento11 from '../assets/Clinica/DSC00136.webp'
+import equipamento12 from '../assets/Clinica/DSC00137.webp'
+import clinicaImage1 from '../assets/Clinica/clinica1.webp'
+import clinicaImage2 from '../assets/Clinica/clinica2.webp'
+import clinicaImage3 from '../assets/Clinica/clinica3.webp'
+import clinicaImage4 from '../assets/Clinica/clinica4.webp'
+import clinicaImage5 from '../assets/Clinica/clinica5.webp'
+import clinicaImage6 from '../assets/Clinica/clinica6.webp'
 const exames = [
   {
     nome: "Cistoscopia Rígida",
@@ -31,12 +47,7 @@ const exames = [
     imagem: ImageExample,
     link: "/exames-tratamentos/exames/urofluxometria",
   },
-  {
-    nome: "Teste de Ereção Fármaco-Induzida",
-    descricao: "Procedimento para avaliar a função erétil com uma medicação injetada no pênis.",
-    imagem: ImageExample,
-    link: "/exames-tratamentos/exames/teste-erecao-farmaco-induzida-copy",
-  },
+ 
   {
     nome: "Biópsia Peniana",
     descricao: "A Biópsia Peniana é um procedimento para retirar uma amostra de tecido do pênis para exame patológico.",
@@ -114,5 +125,24 @@ const procedimentosPopulares = [
   },
 ];
 
+const images = [
+  clinicaImage1,
+  clinicaImage2,
+  clinicaImage3,
+  clinicaImage4,
+  clinicaImage5,
+  clinicaImage6,
+  equipamento1,
+  equipamento2,
+  equipamento3,
+  equipamento5,
+  equipamento6,
+  equipamento7,
+  equipamento8,
+  equipamento9,
+  equipamento10,
+  equipamento11,
+  equipamento12
+];
 
-  export { exames,procedimentosPopulares };
+export { exames, procedimentosPopulares, images };

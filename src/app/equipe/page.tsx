@@ -83,7 +83,7 @@ export default function Equipe() {
     {
       name: 'Dr. Candilberto Lopes Filho',
       title: 'Urologista',
-      crm: 'CRM 5761',
+      crm: '5761',
       graduation: 'Universidade Estadual do Piauí, UESPI, Teresina, Brasil',
       description: 'Médico graduado pela UNINOVAFAPI; Cirurgião Geral e Urologista pela UESPI.',
       image: DrCandiberto,
@@ -155,61 +155,23 @@ export default function Equipe() {
       textoApresentacao: 'Olá! Eu sou a Dra. Glinia Nogueira, dermatologista dedicada a cuidar da saúde e beleza da sua pele.'
     },
     {
-      name: 'Lorena Moura',
-      title: 'Fisioterapeuta',
+      name: 'Dra. Lorena Moura',
+      title: 'Fisioterapeuta Pélvica, Sexóloga',
       crm: '152969-F',
-      graduation: 'Universidade de São Paulo',
+      graduation: 'Formada pela UNINOVAFAPI - Teresina em 2008',
       description: 'Enfermeira dedicada, focada em fornecer cuidados de saúde excepcionais aos pacientes.',
       image: LorenaMoura,
       identificadorFunc: 'CREFITO',
       detalhes: [
-        'Graduação: Universidade de São Paulo',
-        'Área de Atuação: Enfermagem Clínica'
+        'Especialista em Uroginecologia e Sexualidade pelo CBES - PA em 2011',
+        'Fisioterapeuta Pélvica e Sexóloga',
+        'Expertisse Em Reabilitação de Câncer de próstata',
+        'Atua nas disfunções Sexuais feminina e masculina',
+        'Atua na reabilitação pélvica em proctologia',
       ],
       textoApresentacao: 'Oi, sou a Lorena Moura, enfermeira apaixonada por proporcionar conforto e cuidado aos meus pacientes.'
     },
-    {
-      name: 'Lara Feitosa',
-      title: 'Gerente',
-      crm: '',
-      graduation: 'Universidade Federal do Rio de Janeiro',
-      description: 'Enfermeira empenhada em promover a saúde através da alimentação equilibrada.',
-      image: Lara,
-      identificadorFunc: '',
-      detalhes: [
-        'Graduação: Universidade Federal do Rio de Janeiro',
-        'Área de Atuação: Enfermagem Nutricional'
-      ],
-      textoApresentacao: 'Eu sou a Lara Feitosa, enfermeira comprometida com a saúde por meio de uma alimentação balanceada.'
-    },
-    {
-      name: 'Viviane Lima',
-      title: 'Recepcionista',
-      crm: '',
-      graduation: 'Universidade Estadual de Campinas',
-      description: 'Enfermeira com foco em saúde mental e bem-estar emocional dos pacientes.',
-      image: Example,
-      identificadorFunc: '',
-      detalhes: [
-        'Graduação: Universidade Estadual de Campinas',
-        'Área de Atuação: Enfermagem Psiquiátrica'
-      ],
-      textoApresentacao: 'Olá, sou a Viviane Lima, enfermeira dedicada a promover o equilíbrio emocional e mental dos meus pacientes.'
-    },
-    {
-      name: 'Ingred',
-      title: 'Técnica de Enfermagem',
-      crm: '',
-      graduation: 'Universidade de Brasília',
-      description: 'Enfermeira dedicada à reabilitação e melhoria da qualidade de vida dos pacientes.',
-      image: Example,
-      identificadorFunc: '',
-      detalhes: [
-        'Graduação: Universidade de Brasília',
-        'Área de Atuação: Enfermagem de Reabilitação'
-      ],
-      textoApresentacao: 'Sou a Ingred, enfermeira focada em ajudar meus pacientes a recuperarem sua qualidade de vida e independência.'
-    },
+   
   ];
 
   const handleOpenModal = (funcionario:Funcionario) => {
@@ -249,7 +211,7 @@ export default function Equipe() {
              {member.identificadorFunc && (
 
               <p className="mb-1 bg-primary text-white p-1 rounded-md">
-                {`${member.identificadorFunc} ${member.crm}`}
+                {`${member.identificadorFunc} (PI) ${member.crm}`}
                 
               </p>
              )}

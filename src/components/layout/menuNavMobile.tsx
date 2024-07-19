@@ -37,14 +37,15 @@ export default function MenuMobile() {
                 <MenubarTrigger href={"/"}>Home</MenubarTrigger>
               </Link>
             </MenubarMenu>
-            <MenubarMenu>
+             {/* Retirado mediante pedido */}
+            {/* <MenubarMenu>
               <Link
                 href={"/about-me"}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <MenubarTrigger href={"/about-me"}>Quem Somos</MenubarTrigger>
               </Link>{" "}
-            </MenubarMenu>
+            </MenubarMenu> */}
             <MenubarMenu>
               <Link href={"/equipe"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <MenubarTrigger href={"/equipe"}>Nossa Equipe</MenubarTrigger>
@@ -169,8 +170,8 @@ export default function MenuMobile() {
               </DropdownMenu>
             </MenubarMenu>
             <MenubarMenu>
-              <Link href={"/blog"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <MenubarTrigger href="/blog">Blog</MenubarTrigger>
+              <Link href={"/noticias"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <MenubarTrigger href="/noticias">Noticias</MenubarTrigger>
               </Link>
             </MenubarMenu>
           </Menubar>
