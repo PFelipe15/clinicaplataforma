@@ -211,7 +211,7 @@ export default function Equipe() {
              {member.identificadorFunc && (
 
               <p className="mb-1 bg-primary text-white p-1 rounded-md">
-                {`${member.identificadorFunc} (PI) ${member.crm}`}
+                {`${member.identificadorFunc} -PI ${member.crm}`}
                 
               </p>
              )}

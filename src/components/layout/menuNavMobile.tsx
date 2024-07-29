@@ -140,9 +140,9 @@ export default function MenuMobile() {
                   </Link>
                   <Link
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    href={"/exames-tratamentos/tratamentos/implantes-hormonais"}
+                    href={"/exames-tratamentos/tratamentos/reposicao-testosterona"}
                   >
-                    <DropdownMenuItem>Implantes Hormonais</DropdownMenuItem>
+                    <DropdownMenuItem>Reposição de Testosterona</DropdownMenuItem>
                   </Link>
                   <Link
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -171,7 +171,7 @@ export default function MenuMobile() {
             </MenubarMenu>
             <MenubarMenu>
               <Link href={"/noticias"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <MenubarTrigger href="/noticias">Noticias</MenubarTrigger>
+                <MenubarTrigger href="/noticias">Notícias</MenubarTrigger>
               </Link>
             </MenubarMenu>
           </Menubar>

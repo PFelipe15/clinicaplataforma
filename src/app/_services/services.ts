@@ -17,6 +17,28 @@ import clinicaImage4 from '../assets/Clinica/clinica4.webp'
 import clinicaImage5 from '../assets/Clinica/clinica5.webp'
 import clinicaImage6 from '../assets/Clinica/clinica6.webp'
 const exames = [
+
+  {
+    nome: "Terapia por Ondas de Choque",
+    descricao: "A Terapia por Ondas de Choque é um tratamento que utiliza ondas de choque para estimular a cicatrização de tecidos.",
+    imagem: ImageExample,
+    link: "/exames-tratamentos/tratamentos/terapia-por-ondas-de-choque",
+  },
+
+  {
+    nome: "Reposição de Testosterona",
+    descricao: "Os Implantes Hormonais são dispositivos que liberam hormônios para tratar desequilíbrios hormonais.",
+    imagem: ImageExample,
+    link: "/exames-tratamentos/tratamentos/reposicao-testosterona",
+  },
+
+  {
+    nome: "Vasectomia",
+    descricao: "A Vasectomia é um procedimento cirúrgico para esterilização masculina.",
+    imagem: ImageExample,
+    link: "/exames-tratamentos/tratamentos/vasectomia",
+  },
+
   {
     nome: "Cistoscopia Rígida",
     descricao: "A Cistoscopia Rígida é um exame endoscópico que permite a visualização do interior da bexiga e da uretra através de um cistoscópio rígido.",
@@ -35,6 +57,7 @@ const exames = [
     imagem: ImageExample,
     link: "/exames-tratamentos/exames/teste-erecao-farmaco-induzida",
   },
+  
   {
     nome: "Urodinâmica Completa",
     descricao: "A Urodinâmica Completa é um conjunto de exames que avalia o funcionamento da bexiga e da uretra, medindo as pressões e os fluxos urinários.",
@@ -72,30 +95,15 @@ const exames = [
     imagem: ImageExample,
     link: "/exames-tratamentos/tratamentos/fisioterapia-pelvica",
   },
-  {
-    nome: "Implantes Hormonais",
-    descricao: "Os Implantes Hormonais são dispositivos que liberam hormônios para tratar desequilíbrios hormonais.",
-    imagem: ImageExample,
-    link: "/exames-tratamentos/tratamentos/implantes-hormonais",
-  },
+  
   {
     nome: "Postectomia",
     descricao: "A Postectomia é a remoção cirúrgica do prepúcio.",
     imagem: ImageExample,
     link: "/exames-tratamentos/tratamentos/postectomia",
   },
-  {
-    nome: "Terapia por Ondas de Choque",
-    descricao: "A Terapia por Ondas de Choque é um tratamento que utiliza ondas de choque para estimular a cicatrização de tecidos.",
-    imagem: ImageExample,
-    link: "/exames-tratamentos/tratamentos/terapia-por-ondas-de-choque",
-  },
-  {
-    nome: "Vasectomia",
-    descricao: "A Vasectomia é um procedimento cirúrgico para esterilização masculina.",
-    imagem: ImageExample,
-    link: "/exames-tratamentos/tratamentos/vasectomia",
-  }
+ 
+
 ];
 
 

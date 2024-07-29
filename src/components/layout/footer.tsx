@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center mb-2">
               <BsWhatsapp size="20" className="text-white" />
-              <a href="https://wa.me/5586999337249" target="_blank" rel="noopener noreferrer" className="ml-2 text-lg hover:text-gray-300 transition-all">(86) 9993372499</a>
+              <a href="https://wa.me/5586999337249" target="_blank" rel="noopener noreferrer" className="ml-2 text-lg hover:text-gray-300 transition-all">(86) 999337249</a>
             </div>
             <div className="flex items-center mb-2">
               <CgInstagram size="20" className="text-white" />

@@ -1,12 +1,13 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { GoogleMap, useJsApiLoader, StreetViewPanorama, Marker } from '@react-google-maps/api';
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { Mail, MapPin } from "lucide-react";
+import { CgInstagram } from "react-icons/cg";
+import { BsWhatsapp } from "react-icons/bs";
+import { MdMarkEmailRead } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 import ButtonConsulta from "../buttonConsulta";
 import WhatsAppChat from "./whatsAppChat"; // Import the new WhatsAppChat component
-import { CgInstagram } from "react-icons/cg";
-import { BsMailbox, BsWhatsapp } from "react-icons/bs";
-import { MdMarkEmailRead, MdMarkEmailUnread } from "react-icons/md";
 
 type WindowSize = {
   width: number | undefined;
@@ -42,10 +43,10 @@ export default function Map() {
   }
 
   const [center, setCenter] = useState({
-    lat:  -5.07848254265384, 
+    lat: -5.07848254265384, 
     lng: -42.78508261184313,
   });
- 
+
   const size = useWindowSize();
 
   const containerStyle = {
@@ -73,14 +74,25 @@ export default function Map() {
   const handlePhoneMouseOver = () => {
     setShowChat(true); // Show the chat component when mouse over the phone icon
   };
+
   const handleInstagramMouseOver = () => {
-    window.open("https://www.instagram.com/urovida/") // Show the chat component when mouse over the phone icon
+    window.open("https://www.instagram.com/urovida/");
   };
 
   return isLoaded ? (
-    <div className="container flex flex-col shadow-md p-2 my-8">
-      <div className="flex flex-col md:flex-row justify-center   gap-4">
-        <div className="rounded-lg flex-col">
+    <motion.div
+      className="container flex flex-col shadow-md p-2 my-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="flex flex-col justify-around md:flex-row   gap-4">
+        <motion.div
+          className="rounded-lg flex-col"
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 200 }}
+        >
           <GoogleMap
             options={options}
             mapContainerStyle={containerStyle}
@@ -90,57 +102,83 @@ export default function Map() {
             <Marker
               position={center}
               visible={true}
-              onClick={() => {
-                setShowChat(true); // Show the chat component when clicking the marker
-              }}
+              onClick={() => setShowChat(true)}
             />
-
-            
           </GoogleMap>
-        </div>
-        <div className="flex flex-col mt-4 justify-center gap-2 md:mr-8 font-bold text-primary">
+        </motion.div>
+        <motion.div
+          className="flex flex-col mt-4 justify-center gap-2 md:mr-8 font-bold text-primary"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="hidden md:block text-3xl font-semibold mb-4">
             Localização da Clínica
           </h2>
           <div className="flex flex-col gap-4">
-            <div className="flex items-center">
+            <motion.div
+              className="flex items-center"
+              whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            >
               <MapPin size="32" className="text-primary" />
               <p>Avenida Senador Area Leao, 1480</p>
-            </div>
-            <div className="flex items-center">
+            </motion.div>
+            <motion.div
+              className="flex items-center"
+              whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            >
               <MapPin size="32" className="text-primary" />
               <p>Bairro Jóquei, Teresina/PI</p>
-            </div>            
-            
+            </motion.div>
           </div>
           <ButtonConsulta />
-        </div>
+        </motion.div>
       </div>
-      <div className="p-8 flex justify-center flex-col md:flex-row items-center gap-5">
-        <div
+      <motion.div
+        className="p-8 flex justify-center flex-col md:flex-row items-center gap-5"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.div
           className="flex items-center gap-2 hover:scale-105 transition-all"
           onClick={handleEmailMouseOver}
+          whileHover={{ scale: 1.1 }}
         >
           <MdMarkEmailRead size="32" className="text-primary" />
           <p>clinicaurovida@yahoo.com</p>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           className="flex gap-2 items-center hover:scale-105 transition-all"
           onMouseOver={handlePhoneMouseOver}
+          whileHover={{ scale: 1.1 }}
         >
           <BsWhatsapp size="32" className="text-primary" />
-          <p>(86) 9993372499</p>
-        </div>
-        <div
+          <p>(86) 999337249</p>
+        </motion.div>
+        <motion.div
           className="flex gap-2 items-center hover:scale-105 transition-all"
           onClick={handleInstagramMouseOver}
+          whileHover={{ scale: 1.1 }}
         >
           <CgInstagram size="32" className="text-primary" />
           <p>Urovida</p>
-        </div>
-      </div>
-      {showChat && <WhatsAppChat onClose={() => setShowChat(false)} />} {/* Render the chat component */}
-    </div>
+        </motion.div>
+      </motion.div>
+      <AnimatePresence>
+        {showChat && (
+          <motion.div
+            key="chat"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.3 }}
+          >
+            <WhatsAppChat onClose={() => setShowChat(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   ) : (
     <div>Carregando...</div>
   );

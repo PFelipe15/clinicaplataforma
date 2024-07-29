@@ -2,8 +2,7 @@ import Image from 'next/image';
 import React    from 'react';
 import { getPosts } from '../_services/notion';
 import Link from 'next/link';
-import VideoEmbed from '@/components/layout/IframeVideo';
-
+ 
 export default async function BlogHome() {
   const postsNotion = await getPosts();
     return (
@@ -15,7 +14,7 @@ export default async function BlogHome() {
          {postsNotion.map((post, index) => (
            <div
              key={index}
-             className="bg-white box-content rounded-lg shadow-lg   transition-transform transform hover:scale-105 hover:shadow-2xl"
+             className="bg-white border-primary border-r-[15px]  border-b-[20px] p-2 box-content rounded-lg shadow-lg   transition-transform transform hover:scale-105 hover:shadow-2xl"
            >
              <div className="relative">
                <Image

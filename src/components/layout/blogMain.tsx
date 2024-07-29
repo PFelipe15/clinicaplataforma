@@ -7,16 +7,16 @@ import { Button } from "../ui/button";
 export default async function BlogMain() {
     const postsNotion = await getMainPosts();
      return (
-       <div className="flex     text-white flex-col rounded-md items-center w-full justify-center  ">
+       <div className="flex   text-white flex-col rounded-md items-center w-full justify-center  ">
          <h1 className=" text-3xl text-center text-primary font-semibold mb-8 animate-fadeIn">
            Nossas Noticias e Pesquisas
          </h1>
 
-         <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
            {postsNotion.map((post, index) => (
              <div
                key={index}
-               className="bg-white max-w-[400px]  rounded-lg shadow-lg w-full   transition-transform transform hover:scale-105 hover:shadow-2xl "
+               className="bg-white max-w-[400px] border-primary border-r-[15px]  border-b-[15px]   rounded-lg shadow-lg w-full   transition-transform transform hover:scale-105 hover:shadow-2xl "
              >
                <div className="relative">
                  <Image
@@ -37,7 +37,7 @@ export default async function BlogMain() {
                    ))}
                  </div>
                </div>
-               <div className="p-6 flex flex-col  h-[400px]  justify-between   ">
+               <div className="p-6 flex flex-col  h-[300px]  justify-between   ">
                  <div>
                    <h2 className="text-2xl font-semibold mb-2 text-primary">
                      {post.title}

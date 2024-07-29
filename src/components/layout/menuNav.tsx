@@ -10,6 +10,7 @@ import {
   } from "@/components/ui/menubar";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
+import CommandSearch from "./comand-search";
 export default function MenuNav() {
     return (
       <Menubar>
@@ -83,9 +84,9 @@ export default function MenuNav() {
                   <MenubarItem>Fisioterapia Pélvica</MenubarItem>
                 </Link>
                 <Link
-                  href={"/exames-tratamentos/tratamentos/implantes-hormonais"}
+                  href={"/exames-tratamentos/tratamentos/reposicao-testosterona"}
                 >
-                  <MenubarItem>Implantes Hormonais</MenubarItem>
+                  <MenubarItem>Reposição de Testosterona</MenubarItem>
                 </Link>
                 <Link
                   href={
@@ -106,11 +107,11 @@ export default function MenuNav() {
         </MenubarMenu>
         <MenubarMenu>
         <Link href="/noticias">
-          <MenubarTrigger href="/noticias">Noticias</MenubarTrigger>
+          <MenubarTrigger href="/noticias">Notícias</MenubarTrigger>
 
         </Link>
 
         </MenubarMenu>
-      </Menubar>
+       </Menubar>
     );
 }

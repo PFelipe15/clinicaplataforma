@@ -64,7 +64,7 @@ const config = {
       backgroundImage: {
         banner: "url('./assets/Funcionarios/Propietarios1[2].JPG')",
         banner2: "url('./assets/Funcionarios/Propietarios1[3].JPG')",
-        banner3: "url('./assets/banner2.png')",
+        banner3: "url('./assets/Clinica/clinica2.webp')",
         telecomunicacoes:"url('./assets/telecomunicacoes.jpg')",
       },
       keyframes: {

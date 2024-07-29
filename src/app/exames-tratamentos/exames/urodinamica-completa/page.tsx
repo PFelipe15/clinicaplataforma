@@ -9,14 +9,28 @@ export default function UrodinamicaCompleta() {
             <section className="mb-6">
                 <h2 className="text-2xl font-semibold text-primary mb-2">O que é?</h2>
                 <p className="text-gray-600 leading-relaxed">
-                    A Urodinâmica Completa é um conjunto de exames que avalia o funcionamento da bexiga e da uretra, medindo as pressões e os fluxos urinários.
+                    A avaliação urodinâmica completa ou estudo urodinâmico (EUD) é um exame realizado para avaliar o funcionamento do trato urinário inferior. Em geral, o EUD é realizado quando há falha no tratamento clínico ou quando se planeja alguma forma de tratamento cirúrgico. Esse exame é essencial para definir e predizer a resposta ao tratamento, podendo ser decisivo quanto à indicação ou não de um tratamento cirúrgico.
                 </p>
             </section>
 
             <section className="mb-6">
-                <h2 className="text-2xl font-semibold text-primary mb-2">Como é feito?</h2>
+                <h2 className="text-2xl font-semibold text-primary mb-2">Quando está indicada?</h2>
+                <p className="text-gray-600 leading-relaxed">
+                    A Urodinâmica Completa é indicada para:
+                </p>
+                <ul className="list-disc list-inside text-gray-600 leading-relaxed">
+                    <li>Pacientes que perdem urina (aos esforços ou associada à urgência miccional)</li>
+                    <li>Homens com Hiperplasia Prostática Benigna (HPB) com sintomas que não estão melhorando com medicamentos (para avaliar necessidade de cirurgia)</li>
+                    <li>Pacientes que não esvaziam completamente a bexiga (resíduo pós-miccional elevado)</li>
+                    <li>Pacientes com bexiga hiperativa ou dolorosa (cistite intersticial) que não estão melhorando com o tratamento</li>
+                    <li>Paciente com problemas neurológicos e sintomas urinários (suspeita de bexiga neurogênica)</li>
+                </ul>
+            </section>
+
+            <section className="mb-6">
+                <h2 className="text-2xl font-semibold text-primary mb-2">Como é feita?</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                    O exame envolve a inserção de pequenos cateteres na bexiga e no reto para medir a pressão, além de sensores para avaliar a atividade muscular.
+                    É feita com equipamentos computadorizados conectados a duas pequenas sondas colocadas na uretra do paciente e outra pequena sonda introduzida pelo ânus.
                 </p>
                 <Image
                     src="https://via.placeholder.com/600x400"
@@ -25,35 +39,26 @@ export default function UrodinamicaCompleta() {
                     height={400}
                     className="rounded-lg mb-4"
                 />
+            </section>
+
+            <section className="mb-6">
+                <h2 className="text-2xl font-semibold text-primary mb-2">O exame dói?</h2>
                 <p className="text-gray-600 leading-relaxed">
-                    Durante o exame, a bexiga é preenchida com água estéril, e o paciente é solicitado a urinar, permitindo a avaliação das pressões e fluxos urinários.
+                    O exame geralmente não gera dor, apenas um pequeno desconforto pela passagem das sondas uretrais.
                 </p>
             </section>
 
             <section className="mb-6">
-                <h2 className="text-2xl font-semibold text-primary mb-2">Indicações</h2>
+                <h2 className="text-2xl font-semibold text-primary mb-2">Precisa de jejum?</h2>
                 <p className="text-gray-600 leading-relaxed">
-                    A Urodinâmica Completa é indicada para:
-                </p>
-                <ul className="list-disc list-inside text-gray-600 leading-relaxed">
-                    <li>Diagnóstico de incontinência urinária</li>
-                    <li>Avaliação de dificuldades miccionais</li>
-                    <li>Investigação de bexiga neurogênica</li>
-                    <li>Estudo de disfunções miccionais após cirurgias pélvicas</li>
-                </ul>
-            </section>
-
-            <section className="mb-6">
-                <h2 className="text-2xl font-semibold text-primary mb-2">Preparação</h2>
-                <p className="text-gray-600 leading-relaxed">
-                    O paciente deve seguir as orientações médicas, podendo ser necessário jejum e suspensão de alguns medicamentos. A bexiga deve estar moderadamente cheia no momento do exame.
+                    Não.
                 </p>
             </section>
 
             <section>
-                <h2 className="text-2xl font-semibold text-primary mb-2">Riscos e Considerações</h2>
+                <h2 className="text-2xl font-semibold text-primary mb-2">Precisa de algum exame?</h2>
                 <p className="text-gray-600 leading-relaxed">
-                    A Urodinâmica Completa é um procedimento seguro, mas pode causar desconforto temporário durante a inserção dos cateteres e ao urinar após o exame.
+                    É recomendado ter uma urocultura recente negativa (o exame não deve ser feito na presença de infecção urinária ativa).
                 </p>
             </section>
         </div>

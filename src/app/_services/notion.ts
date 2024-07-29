@@ -16,8 +16,11 @@ export async function getPosts(){
 
   
 
-     const typedResponse = ( response as  unknown) as NotionDatabaseResponse
 
+     const typedResponse = ( response as  unknown) as NotionDatabaseResponse
+ 
+     
+ 
  
      return typedResponse.results.map((post) => ({
       id: post.id ?? "Desenvolvendo",

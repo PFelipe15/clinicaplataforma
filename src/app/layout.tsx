@@ -85,7 +85,7 @@ export default function RootLayout({
         <meta name="twitter:description" content="Encontre conforto e cura na Urovida. Oferecemos consultas em Urologia, Nefrologia, Medicina da Dor, Acupuntura e Fisioterapia Pélvica. Marque sua teleconsulta hoje mesmo!"/>
       </Head>
       <body
-        className={cn("min-h-screen min-w-[300px] flex flex-col", poetsen.className)}
+        className={cn("min-h-screen min-w-[300px]   flex flex-col", poetsen.className)}
       >
         <Header />
         <main className="flex flex-col container items-center animate-fadeIn">

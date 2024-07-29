@@ -1,23 +1,29 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image1 from '../assets/clinica.jpg';
- import Image, { StaticImageData } from 'next/image';
-import { Maximize2, X } from 'lucide-react';
-import { fetchGooglePlacePhotosDetails } from '../api/reviews';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Galeria from '@/components/layout/galeria';
 
-
-
 const Clinica = () => {
-
-
-
   return (
     <div className="container flex flex-col p-8">
-      <h1 className="text-3xl text-primary font-semibold mb-8">Sobre a Clínica</h1>
+      <motion.h1
+        className="text-3xl text-primary font-semibold mb-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Sobre a Clínica
+      </motion.h1>
 
       <div className="grid grid-cols-1 animate-fadeIn sm:grid-cols-2 gap-6">
-        <div className="bg-primary text-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:bg-primary-dark hover:scale-105">
+        <motion.div
+          className="bg-primary text-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:bg-primary-dark hover:scale-105"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-2xl border-b-2 p-2 font-bold mb-4">Missão</h2>
           <p className="text-white">
             Proporcionar atendimento de excelência em saúde, focado em
@@ -25,9 +31,14 @@ const Clinica = () => {
             trato genital e urinário, adotando enfoque personalizado e
             atencioso, direcionado ao bem-estar dos pacientes.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-primary text-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:bg-primary-dark hover:scale-105">
+        <motion.div
+          className="bg-primary text-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:bg-primary-dark hover:scale-105"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-2xl p-2 border-b-2 font-bold text-white mb-4">Visão</h2>
           <p className="text-white">
             Tornar-se o centro de referência em urologia na região, reconhecido
@@ -35,10 +46,15 @@ const Clinica = () => {
             constante inovação em práticas médicas, valorizando sempre a
             qualidade de vida dos pacientes.
           </p>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="bg-primary  text-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:bg-primary-dark hover:scale-105 mt-6">
+      <motion.div
+        className="bg-primary text-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:bg-primary-dark hover:scale-105 mt-6"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <h2 className="text-2xl p-2 border-b-2 font-bold text-white mb-4">Valores</h2>
         <ul className="list-disc text-white pl-6 space-y-4">
           <li>
@@ -57,13 +73,18 @@ const Clinica = () => {
             a excelência clínica e a adaptação às novidades do campo urológico.
           </li>
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="mt-8 flex gap-4 text-center flex-col lg:flex-row lg:text-left justify-between  border-b-2 border-primary py-4">
+      <motion.div
+        className="mt-8 flex gap-4 text-center flex-col lg:flex-row lg:text-left justify-between border-b-2 border-primary py-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="flex flex-col gap-10">
           <h1 className="text-3xl text-primary font-semibold">Nosso estabelecimento</h1>
           <p className="text-xl max-w-prose">
-          Nosso estabelecimento oferece um ambiente acolhedor, onde cada paciente é tratado com respeito e dignidade. Contamos com instalações modernas e uma equipe dedicada para garantir uma excelente experiência desde a recepção até o atendimento especializado. Nossos consultórios, equipados com tecnologia de ponta, asseguram diagnósticos precisos e tratamentos eficazes, priorizando sempre a segurança e o bem-estar dos pacientes
+            Nosso estabelecimento oferece um ambiente acolhedor, onde cada paciente é tratado com respeito e dignidade. Contamos com instalações modernas e uma equipe dedicada para garantir uma excelente experiência desde a recepção até o atendimento especializado. Nossos consultórios, equipados com tecnologia de ponta, asseguram diagnósticos precisos e tratamentos eficazes, priorizando sempre a segurança e o bem-estar dos pacientes.
           </p>
         </div>
         <Image
@@ -73,15 +94,12 @@ const Clinica = () => {
           width={600}
           height={400}
         />
-      </div>
+      </motion.div>
 
       <div className="mt-8">
         <h1 className="text-3xl text-primary font-semibold mb-8">Galeria</h1>
-          <Galeria/>
-       
+        <Galeria />
       </div>
-      
-      
     </div>
   );
 };
